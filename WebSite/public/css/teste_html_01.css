@@ -39,7 +39,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    gap: 1em;
     flex-direction: column;
     width: 70%;
 }
@@ -104,6 +104,7 @@ form {
     border-radius: 0.40em;
     font-weight: 450;
     cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease, font-weight 0.4s ease;
 }
 
 .opcoes label input {
@@ -115,6 +116,26 @@ header {
 
 }
 
+.btn-div {
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #btn_form {
     transition: opacity 0.5s ease-in-out;
+}
+
+.acerto {
+    background-color: rgb(144, 255, 177) !important;
+    color: #222e23 !important;
+    font-weight: 550 !important;
+}
+
+.erro {
+    background-color: rgb(255, 144, 151) !important;
+    color: #2e2224 !important;
+    font-weight: 550 !important;
 }

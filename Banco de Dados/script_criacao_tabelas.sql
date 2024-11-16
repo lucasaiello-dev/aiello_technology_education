@@ -53,20 +53,4 @@ CREATE TABLE pergunta (
 		CHECK (idPergunta <= 10)
 );
 
-CREATE TABLE opcao (
-	idOpcao INT AUTO_INCREMENT,
-    fkTeste INT,
-    fkPergunta INT,
-    descricao varchar(45),
-    correta tinyint,
-    CONSTRAINT pkCompostaOpcao
-		PRIMARY KEY (idOpcao, fkTeste, fkPergunta),
-	CONSTRAINT fkTesteOpcao
-		FOREIGN KEY (fkTeste)
-        REFERENCES teste(idTeste),
-	CONSTRAINT fkPerguntaOpcao
-		FOREIGN KEY (fkPergunta)
-        REFERENCES pergunta(idPergunta)
-);
-
 
