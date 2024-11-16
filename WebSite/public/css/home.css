@@ -1,0 +1,310 @@
+.sessao.tutoriais {
+    height: 60vh;
+}
+
+.btn-tutoriais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    gap: 0.5em;
+}
+
+.navegar {
+    background-color: #00245C;
+    border: 0;
+    border-radius: 17px;
+    width: 30%;
+    padding: 0.4em;
+}
+
+.navegar img {
+    width: 2.5em;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    height: 100%;
+    width: 53%;
+}
+
+.cards div {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards img {
+    width: 85%;
+}
+
+.img {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 2.5em 10em 0;
+}
+
+.img .btn {
+    align-self: flex-start;
+    margin-top: 2em;
+    padding-inline: 3em;
+    border-radius: 1.1em;
+    font-size: 0.9em;
+}
+
+.container.sobre div.img {
+    background-image: url('C:/Users/Administrador/Desktop/Git/Meus-repositorios/projeto_individual_dashboard_e_api/WebSite/public/assets/448847749_1212589626405268_910324570910464687_n.jpg');
+    background-size: cover; 
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.sessao.resultado {
+    background-color: #00245C;
+    height: 90vh;
+}
+
+.container.resultado {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.4em;
+}
+
+.container.resultado .titulo {
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.container.resultado .subtitulo {
+    color: #FFFFFF;
+    font-size: 1.4em;
+}
+
+.resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 100%;
+    gap: 1.5em;
+}
+
+.conquista {
+    border: 0.25em #4FB1FF solid;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 42vh;
+}
+
+.borda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: #00245C;
+    padding-inline: 1em;
+    margin-top: -3em;
+}
+
+.borda img {
+    width: 3.3em;
+    background-color: #FFFFFF;
+    border-radius: 0.7em;
+}
+
+.conquista .info {
+    align-items: center;
+    width: 90%;
+    gap: 0;
+}
+
+.conquista .info .titulo {
+    font-size: 7em;
+}
+
+.conquista .text {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.3em;
+}
+
+.sessao.feedbacks {
+    height: 85vh;
+}
+
+.container.feedbacks {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedbacks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.depoimento {
+    height: 50vh;
+    width: 32%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.depoimento .text {
+    text-align: center;
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    gap: 1em;
+}
+
+.perfil .img {
+    border-radius: 50%;
+    width: 3.5em;
+    height: 3.5em;
+    background-color: #00245C;
+}
+
+.perfil p {
+    font-weight: 500;
+}
+
+.sessao.fale-conosco {
+    background-color: #4FB1FF;
+    height: 90vh;
+}
+
+.container.fale-conosco .descricao {
+    gap: 1.5em;
+    width: 50%;
+}
+
+.container.fale-conosco .descricao p {
+    margin-top: -1em;
+}
+
+.descricao .titulos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.descricao .titulos .titulo {
+    font-size: 4em;
+}
+
+.descricao .titulos .subtitulo {
+    font-size: 1.2em;
+    color: #000000;
+    font-weight: 680;
+}
+
+.meios-contato {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    width: 100%;
+}
+
+.contato img {
+    width: 3em;
+    border: 0.22em #ffffff solid;
+    border-radius: 50%;
+}
+
+.contato .titulo {
+    font-size: 2em;
+    font-weight: 720;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.campos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75em;
+}
+
+.campos input,
+select,
+textarea {
+    outline: none;
+    border: 0;
+    border-radius: 0.65em;
+    width: 85%;
+    height: 90%;
+    padding: 1em;
+    resize: none;
+    color: #727272;
+    font-size: 1em;
+    font-weight: 450;
+}
+
+.campos textarea {
+    height: 20vh;
+}
+
+.campos .btn {
+    background-color: #00245C;
+    padding-inline: 14em;
+    border-radius: 1.3em;
+    margin-top: 0.85em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 41vh;
+}
+
+footer .container {
+    margin-top: -1.2em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: 6.3em;
+    margin-inline: 6em;
+}

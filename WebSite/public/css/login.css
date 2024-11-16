@@ -1,0 +1,111 @@
+.sessao.login {
+    background-color: #00245C;
+    height: 86vh;
+}
+
+.sessao.login .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.4em;
+}
+
+.sessao.login.cadastro {
+    height: 118vh;
+}
+
+.titulos h1 {
+    color: #FFFFFF;
+}
+
+.titulos .subtitulo {
+    font-weight: 450;
+}
+
+form {
+    width: 70%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1.7em;
+    padding: 1.3em 1.8em 1.3em 1.8em;
+    gap: 0.8em;
+}
+
+.campo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 4%;
+}
+
+.senha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+    border-bottom: 2px #4FB1FF solid;
+    width: 100%;
+}
+
+.senha input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+.senha img {
+    width: 1.3em;
+}
+
+.campo input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    height: 9vh;
+    border-bottom: 2px #4FB1FF solid;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #727272;
+}
+
+.campo input.reduzido {
+    width: 42%;
+}
+
+.campo .senha input {
+    border-bottom: none;
+}
+
+.btn {
+    margin-top: 1em;
+    width: 95%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    gap: 0.4em;
+}
+
+.btn img {
+    width: 3.5em;
+}
+
+.links {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
