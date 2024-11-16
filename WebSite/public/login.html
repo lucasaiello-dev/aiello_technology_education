@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="assets/logo_ate.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="js/cadastro.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span onclick="window.location.href='home.html'">ATE</span>
+            </div>
+            <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="sobre_mim.html">Sobre Mim</a>
+                <a href="tutoriais.html">Tutoriais</a>
+                <a href="testes.html">Testes</a>
+                <a href="home.html#fale_conosco">Contato</a>
+            </div>
+            <div onclick="window.location.href='login.html'" class="entrar-cadastrar">
+                <div class="text-entrar">
+                    <span>Entrar /</span>
+                    <span>Cadastrar</span>
+                </div>
+                <img src="assets/user.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="sessao login">
+        <div id="div_cadastro" class="container">
+            <div class="titulos">
+                <h2 class="subtitulo">Já é cadastrado?</h2>
+                <h1 class="titulo">Faça login e bons estudos</h1>
+            </div>
+            <form>
+                <div class="campo">
+                    <input required type="email" id="input_email" placeholder="E-mail">
+                </div>
+                <div class="campo">
+                    <div class="senha">
+                        <input required type="password" id="input_senha" placeholder="Senha">
+                        <img id="img_senha" src="assets/eye-crossed.png" onclick="trocarTypeSenha('senha')">
+                    </div>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+            <div class="links">
+                <a href="cadastro.html">Primeiro Acesso</a>
+                <span>|</span>
+                <a href="recuperacao_senha.html">Esqueci a minha senha</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container reduzido">
+            <div class="logo-reduzido">
+                <h1>Aiello</h1>
+                <h3>Technology Education</h3>
+            </div>
+            <div class="parte-reduzido">
+                <h1 class="titulo">Nos Acompanhe</h1>
+                <div class="imgs-logo">
+                    <img src="assets/facebook.png" alt="">
+                    <img src="assets/instagram.png" alt="">
+                    <img src="assets/linkedin-logo.png" alt="">
+                </div>
+            </div>
+            <div class="parte-reduzido">
+                <h1 class="titulo" id="fale_conosco">Fale Conosco</h1>
+                <div class="text-reduzido">
+                    <span>(16) 99763-4968</span>
+                    <span>aiellotech@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <p>Desenvolvido por Lucas Eduardo Aiello | Estudante do 1° Semestre de Análise e Desenvolvimento de Sistemas
+        </p>
+    </footer>
+</body>
+
+</html>

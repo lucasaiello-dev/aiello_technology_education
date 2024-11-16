@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="icon" href="assets/logo_ate.png">
+    <title>Meu Perfil</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span onclick="window.location.href='home.html'">ATE</span>
+            </div>
+            <div class="menu">
+                <a href="home.html">Home</a>
+                <a href="sobre_mim.html">Sobre Mim</a>
+                <a href="tutoriais.html">Tutoriais</a>
+                <a href="testes.html">Testes</a>
+                <a href="home.html#fale_conosco">Contato</a>
+            </div>
+            <div onclick="window.location.href='login.html'" class="entrar-cadastrar">
+                <div class="text-entrar">
+                    <span>Entrar /</span>
+                    <span>Cadastrar</span>
+                </div>
+                <img src="assets/user.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="sessao perfil">
+        <div class="container">
+            <div class="usuario">
+                <h3>Seja bem-vindo(a)</h3>
+                <div class="img"></div>
+                <h1 id="nome_usuario" class="titulo">Lucas Eduardo Aiello</h1>
+                <p id="entrada">Entrou a 6 meses</p>
+            </div>
+            <div class="metricas">
+                <div class="nivel">
+                    <h2>Nível</h2>
+                    <h2 id="nivel">Prata</h2>
+                </div>
+                <div class="metricas-geral">
+                    <div class="metrica">
+                        <p>Tutoriais Realizados</p>
+                        <p class="num">7</p>
+                    </div>
+                    <hr>
+                    <div class="metrica">
+                        <p>Aprovações em Testes</p>
+                        <p class="num">2</p>
+                    </div>
+                    <hr>
+                    <div class="metrica">
+                        <p>Média Geral dos Testes</p>
+                        <p class="num">8.7</p>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="sessao menu-usuario">
+        <div class="container">
+            <div class="img-menu">
+                <img src="assets/computer.png" alt="">
+                <p>Meus Tutoriais</p>
+            </div>
+            <div class="img-menu">
+                <img src="assets/exam.png" alt="">
+                <p>Testes Já Realizados</p>
+            </div>
+            <div class="img-menu">
+                <img src="assets/medal.png" alt="">
+                <p>Certificados</p>
+            </div>
+            <div class="img-menu">
+                <img src="assets/form.png" alt="">
+                <p>Meus Dados</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="sessao feedback-usuario">
+        <div class="container">
+            <div>
+                <h1 class="titulo">Conte-nos a sua experiência</h1>
+                <p>Descreva a sua opinião sobre a nossa metodologia e as possíveis melhorias que precisam ser
+                    realizadas.</p>
+            </div>
+            <form>
+                <div class="campos">
+                    <textarea id="text_mensagem" placeholder="Digite aqui a sua mensagem"></textarea>
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container reduzido">
+            <div class="logo-reduzido">
+                <h1>Aiello</h1>
+                <h3>Technology Education</h3>
+            </div>
+            <div class="parte-reduzido">
+                <h1 class="titulo">Nos Acompanhe</h1>
+                <div class="imgs-logo">
+                    <img src="assets/facebook.png" alt="">
+                    <img src="assets/instagram.png" alt="">
+                    <img src="assets/linkedin-logo.png" alt="">
+                </div>
+            </div>
+            <div class="parte-reduzido">
+                <h1 class="titulo" id="fale_conosco">Fale Conosco</h1>
+                <div class="text-reduzido">
+                    <span>(16) 99763-4968</span>
+                    <span>aiellotech@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <p>Desenvolvido por Lucas Eduardo Aiello | Estudante do 1° Semestre de Análise e Desenvolvimento de Sistemas
+        </p>
+    </footer>
+</body>
+
+</html>
