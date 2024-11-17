@@ -139,3 +139,67 @@ header {
     color: #2e2224 !important;
     font-weight: 550 !important;
 }
+
+#fim {
+    gap: 0.5em;
+}
+
+.subtitulo {
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.fim-resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    gap: 1.3em
+}
+
+.resultado {
+    border: 0.3em #4FB1FF solid;
+    border-radius: 0.9em;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.resultado p{
+    color: #FFFFFF;
+    font-size: 2em;
+    font-weight: 650;
+}
+
+.resultado #acertos {
+    color: rgb(144, 255, 177);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.resultado #erros {
+    color: rgb(255, 144, 151) ;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.menu-teste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3em;
+    width: 80%;
+}
+
+.menu-teste .btn {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 0.75em;
+    border-radius: 1.2em;
+}

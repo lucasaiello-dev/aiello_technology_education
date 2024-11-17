@@ -21,35 +21,38 @@ function atualizarProgresso() {
 
 function validarResposta() {
 
-    trocarCorAcerto(label_escolhida)
-
     if (valorOpcaoAtual == -1) {
         alert('Escolha alguma opção!')
         return
     }
 
-    atualizarProgresso()
+    trocarCorAcerto(label_escolhida)
 
-    if (listaPerguntasPassadas.length == 10) {
-        return false
-    }
+
+    atualizarProgresso()
 
     setTimeout(() => {passarPergunta()}, 500)
     delayButton()
-
 }
 
 function passarPergunta() {
 
+    var ultima_pergunta = false
     var proxima_pergunta = 0
 
-    while (true) {
-        proxima_pergunta = sortearProximaPergunta()
-        if (listaPerguntasPassadas.indexOf(proxima_pergunta) == -1) {
-            listaPerguntasPassadas.push(proxima_pergunta)
-            break
+    if (listaPerguntasPassadas.length == 10) {
+        proxima_pergunta = 11      
+        ultima_pergunta = true
+    } else {
+        while (true) {
+            proxima_pergunta = sortearProximaPergunta()
+            if (listaPerguntasPassadas.indexOf(proxima_pergunta) == -1) {
+                listaPerguntasPassadas.push(proxima_pergunta)
+                break
+            }
         }
     }
+
 
 
     console.log(blocoAtual, proxima_pergunta, listaPerguntasPassadas)
@@ -69,6 +72,11 @@ function passarPergunta() {
     listaAcertos.push(valorOpcaoAtual)
     console.log(listaAcertos)
     valorOpcaoAtual = -1
+
+    if (ultima_pergunta) {
+        finalizarTeste()
+    }
+
 }
 
 function sortearProximaPergunta() {
@@ -76,6 +84,8 @@ function sortearProximaPergunta() {
 }
 
 function iniciarTeste() {
+    rolarParaBaixo()
+
     const botao_comecar = document.getElementById('inicio_teste')
     const div_comecar = document.getElementById('div_inicio_teste')
 
@@ -103,7 +113,7 @@ function delayButton() {
 
     setTimeout(() => {
         button.disabled = false;
-    }, 500);
+    }, 1500);
 }
 
 function trocarCorAcerto(elemento) {
@@ -127,8 +137,23 @@ function contarAcertos() {
 }
 
 function contarErros() {
-    const qtd_erros = contarAcertos() - listaAcertos.length
+    const qtd_erros = listaAcertos.length - contarAcertos()
     return qtd_erros
+}
+
+function finalizarTeste() {
+    const button = document.getElementById('btn_form')
+    setTimeout(() => { button.style = "opacity: 0%" }, 450)
+
+    const span_acertos = document.getElementById('acertos')
+    span_acertos.innerHTML = contarAcertos()
+
+    const span_erros = document.getElementById('erros')
+    span_erros.innerHTML = contarErros()
+}
+
+function rolarParaBaixo() {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
 
 

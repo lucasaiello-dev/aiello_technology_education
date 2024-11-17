@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/testes_tecnicos.css">
     <link rel="icon" href="../assets/logo_ate.png">
     <script src="../js/index.js"></script>
-    <title>HTML | Nível 01</title>
+    <title>CSS | Nível 02</title>
 </head>
 
 <body>
@@ -36,7 +36,7 @@
 
     <div class="sessao">
         <div class="container">
-            <h1 class="titulo">HTML | Nível 01</h1>
+            <h1 class="titulo">CSS | Nível 02</h1>
             <div class="progress-container" id="progress-container">
                 <div class="progress-bar" id="progress-bar"></div>
             </div>
@@ -46,226 +46,222 @@
                 </div>
 
                 <div id="1" class="questao esconder">
-                    <h3 class="enunciado">Qual é o Significado de HTML?</h3>
+                    <h3 class="enunciado">Marque a alternativa que define um elemento como contêiner flexível.</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_1')">
                             <input id="opcao1_1" type="radio" name="option" value=0>
-                            Hyperlink and Text Markup Language
+                            flex: container;
                         </label>
                         <label onclick="marcarRadio('opcao2_1')">
-                            <input id="opcao2_1" type="radio" name="option" value=1>
-                            HyperText Markup Language
+                            <input id="opcao2_1" type="radio" name="option" value=0>
+                            flexbox: display
                         </label>
                         <label onclick="marcarRadio('opcao3_1')">
-                            <input id="opcao3_1" type="radio" name="option" value=0>
-                            Host Transfer Markup Language
+                            <input id="opcao3_1" type="radio" name="option" value=1>
+                            display: flex;
                         </label>
                         <label onclick="marcarRadio('opcao4_1')">
                             <input id="opcao4_1" type="radio" name="option" value=0>
-                            HighText Markup Language
+                            container: flex;
                         </label>
                     </div>
                 </div>
 
                 <div id="2" class="questao esconder">
-                    <h3 class="enunciado">Qual é a forma correta de indicar a abertura e o fechamento do código HTML?
+                    <h3 class="enunciado">Marque a alternativa que define a direção dos itens dentro do contêiner flexível.
                     </h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_2')">
-                            <input id="opcao1_2" type="radio" name="option" value=1>
-                            &lt;html&gt;&lt;/html&gt;
+                            <input id="opcao1_2" type="radio" name="option" value=0>
+                            direction
                         </label>
                         <label onclick="marcarRadio('opcao2_2')">
-                            <input id="opcao2_2" type="radio" name="option" value=0>
-                            &lt;body&gt;&lt;/body&gt;
+                            <input id="opcao2_2" type="radio" name="option" value=1>
+                            flex-direction
                         </label>
                         <label onclick="marcarRadio('opcao3_2')">
                             <input id="opcao3_2" type="radio" name="option" value=0>
-                            [html] [/html]
+                            align-direction
                         </label>
                         <label onclick="marcarRadio('opcao4_2')">
                             <input id="opcao4_2" type="radio" name="option" value=0>
-                            &lt;start&gt;&lt;/end&gt;
+                            flex-flow
                         </label>
                     </div>
                 </div>
 
                 <div id="3" class="questao esconder">
-                    <h3 class="enunciado">Marque a alternativa que contém apenas tags de texto.</h3>
+                    <h3 class="enunciado">Qual propriedade CSS altera a sequência dos itens dentro do contêiner flexível?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_3')">
                             <input id="opcao1_3" type="radio" name="option" value=1>
-                            &lt;h1&gt; &lt;p&gt; &lt;span&gt;
+                            order
                         </label>
                         <label onclick="marcarRadio('opcao2_3')">
                             <input id="opcao2_3" type="radio" name="option" value=0>
-                            &lt;div&gt; &lt;ul&gt; &lt;ol&gt;
+                            flex-order
                         </label>
                         <label onclick="marcarRadio('opcao3_3')">
                             <input id="opcao3_3" type="radio" name="option" value=0>
-                            &lt;table&gt; &lt;tr&gt; &lt;td&gt;
+                            item-order
                         </label>
                         <label onclick="marcarRadio('opcao4_3')">
                             <input id="opcao4_3" type="radio" name="option" value=0>
-                            &lt;input&gt; &lt;button&gt; &lt;form&gt;
+                            flex-sequence
                         </label>
                     </div>
                 </div>
 
                 <div id="4" class="questao esconder">
-                    <h3 class="enunciado">Qual das tags abaixo permite colocar textos em negrito?</h3>
+                    <h3 class="enunciado">Qual propriedade CSS ajusta o alinhamento de um item específico dentro do contêiner flexível?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_4')">
                             <input id="opcao1_4" type="radio" name="option" value=0>
-                            &lt;i&gt;
+                            justify-self
                         </label>
                         <label onclick="marcarRadio('opcao2_4')">
                             <input id="opcao2_4" type="radio" name="option" value=1>
-                            &lt;b&gt;
+                            align-self
                         </label>
                         <label onclick="marcarRadio('opcao3_4')">
                             <input id="opcao3_4" type="radio" name="option" value=0>
-                            &lt;u&gt;
+                            item-align
                         </label>
                         <label onclick="marcarRadio('opcao4_4')">
                             <input id="opcao4_4" type="radio" name="option" value=0>
-                            &lt;em&gt;
+                            self-align
                         </label>
                     </div>
                 </div>
 
                 <div id="5" class="questao esconder">
-                    <h3 class="enunciado">Marque a alternativa em que a tag h1 está sendo utilizada corretamente.</h3>
+                    <h3 class="enunciado">Para centralizar os itens no contêiner tanto horizontalmente quanto verticalmente, qual combinação de comandos está correta?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_5')">
                             <input id="opcao1_5" type="radio" name="option" value=0>
-                            &lt;h1&gt;Este é um título de nível 1
+                            align-content: center; justify-content: center;
                         </label>
                         <label onclick="marcarRadio('opcao2_5')">
-                            <input id="opcao2_5" type="radio" name="option" value=0>
-                            &lt;h1 Este é um título de nível 1&gt;
+                            <input id="opcao2_5" type="radio" name="option" value=1>
+                            justify-content: center; align-items: center;
                         </label>
                         <label onclick="marcarRadio('opcao3_5')">
-                            <input id="opcao3_5" type="radio" name="option" value=1>
-                            &lt;h1&gt;Este é um título de nível 1&lt;/h1&gt;
+                            <input id="opcao3_5" type="radio" name="option" value=0>
+                            justify-content: flex-start; align-items: center;
                         </label>
                         <label onclick="marcarRadio('opcao4_5')">
                             <input id="opcao4_5" type="radio" name="option" value=0>
-                            &lt;h1&gt; title="Título de Nível 1">Este é um título de nível 1&lt;/h1&gt;
+                            justify-content: center; align-items: flex-end;
                         </label>
                     </div>
                 </div>
 
                 <div id="6" class="questao esconder">
-                    <h3 class="enunciado">Qual é o local onde devemos colocar o título da aba usando a tag &lt;title&gt;
-                        no HTML?</h3>
+                    <h3 class="enunciado">Para distribuir os itens de forma que haja espaço igual entre eles e alinhar os itens ao final do contêiner, qual combinação de comandos está correta?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_6')">
                             <input id="opcao1_6" type="radio" name="option" value=0>
-                            &lt;body&gt;
+                            justify-content: center; align-items: flex-end;
                         </label>
                         <label onclick="marcarRadio('opcao2_6')">
                             <input id="opcao2_6" type="radio" name="option" value=0>
-                            &lt;header&gt;
+                            justify-content: space-around; align-items: center;
                         </label>
                         <label onclick="marcarRadio('opcao3_6')">
                             <input id="opcao3_6" type="radio" name="option" value=1>
-                            &lt;head&gt;
+                            justify-content: space-between; align-items: flex-end;
                         </label>
                         <label onclick="marcarRadio('opcao4_6')">
                             <input id="opcao4_6" type="radio" name="option" value=0>
-                            &lt;footer&gt;
+                            justify-content: flex-start; align-items: flex-end;
                         </label>
                     </div>
                 </div>
 
                 <div id="7" class="questao esconder">
-                    <h3 class="enunciado">Para que é usada a tag &lt;link&gt; no HTML?</h3>
+                    <h3 class="enunciado">Para definir o espaçamento entre os itens em um contêiner flexível, qual combinação de comandos está correta?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_7')">
-                            <input id="opcao1_7" type="radio" name="option" value=0>
-                            Para adicionar links clicáveis dentro do conteúdo
+                            <input id="opcao1_7" type="radio" name="option" value=1>
+                            display: flex; gap: 20px;
                         </label>
                         <label onclick="marcarRadio('opcao2_7')">
-                            <input id="opcao2_7" type="radio" name="option" value=1>
-                            Para vincular folhas de estilo externas ou outros recursos
+                            <input id="opcao2_7" type="radio" name="option" value=0>
+                            display: flex; space-between: 20px;
                         </label>
                         <label onclick="marcarRadio('opcao3_7')">
                             <input id="opcao3_7" type="radio" name="option" value=0>
-                            Para criar ancoras dentro da página
+                            display: grid; spacing: 20px;
                         </label>
                         <label onclick="marcarRadio('opcao4_7')">
                             <input id="opcao4_7" type="radio" name="option" value=0>
-                            Para definir títulos e metadados
+                            display: flex; margin: 20px;
                         </label>
                     </div>
                 </div>
 
                 <div id="8" class="questao esconder">
-                    <h3 class="enunciado">Para que serve a tag &lt;main&gt; no HTML?</h3>
+                    <h3 class="enunciado">Qual unidade de medida em CSS é recomendada para tornar o tamanho do texto responsivo?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_8')">
                             <input id="opcao1_8" type="radio" name="option" value=0>
-                            Para definir o cabeçalho principal do documento
+                            px
                         </label>
                         <label onclick="marcarRadio('opcao2_8')">
                             <input id="opcao2_8" type="radio" name="option" value=0>
-                            Para definir a navegação principal do documento
+                            in
                         </label>
                         <label onclick="marcarRadio('opcao3_8')">
-                            <input id="opcao3_8" type="radio" name="option" value=1>
-                            Para incluir o conteúdo principal de um documento
+                            <input id="opcao3_8" type="radio" name="option" value=0>
+                            cm
                         </label>
                         <label onclick="marcarRadio('opcao4_8')">
-                            <input id="opcao4_8" type="radio" name="option" value=0>
-                            Para definir o rodapé do documento
+                            <input id="opcao4_8" type="radio" name="option" value=1>
+                            em
                         </label>
                     </div>
                 </div>
 
                 <div id="9" class="questao esconder">
-                    <h3 class="enunciado">Qual é a diferença entre as tags &lt;header&gt; e &lt;head&gt; no HTML?</h3>
+                    <h3 class="enunciado">Para ajustar a largura de um elemento para ocupar metade da largura de seu contêiner pai, qual comando está correto?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_9')">
                             <input id="opcao1_9" type="radio" name="option" value=0>
-                            A tag &lt;header&gt; é usada para incluir metadados e a tag &lt;head&gt; é usada para
-                            incluir o cabeçalho da página
+                            width: 50vw;
                         </label>
                         <label onclick="marcarRadio('opcao2_9')">
-                            <input id="opcao2_9" type="radio" name="option" value=0>
-                            Não existe nenhuma diferença
+                            <input id="opcao2_9" type="radio" name="option" value=1>
+                            width: 50%;
                         </label>
                         <label onclick="marcarRadio('opcao3_9')">
-                            <input id="opcao3_9" type="radio" name="option" value=1>
-                            &lt;header&gt; é usada para definir o cabeçalho de uma seção e a tag &lt;head&gt; é usada
-                            para incluir metadados e links para recursos externos
+                            <input id="opcao3_9" type="radio" name="option" value=0>
+                            size: 50em;
                         </label>
                         <label onclick="marcarRadio('opcao4_9')">
                             <input id="opcao4_9" type="radio" name="option" value=0>
-                            &lt;header&gt; e a tag &lt;head&gt; têm a mesma funcionalidade e podem ser usadas de forma
-                            intercambiável
+                            width: 50px;
                         </label>
                     </div>
                 </div>
 
                 <div id="10" class="questao esconder">
-                    <h3 class="enunciado">Qual tag é usada para criar um parágrafo em HTML?</h3>
+                    <h3 class="enunciado">Para alterar a cor do texto de um elemento quando o mouse passa sobre ele, qual comando está correto?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_10')">
                             <input id="opcao1_10" type="radio" name="option" value=0>
-                            &lt;par&gt;
+                            a:hover { background-color: red; }
                         </label>
                         <label onclick="marcarRadio('opcao2_10')">
-                            <input id="opcao2_10" type="radio" name="option" value=1>
-                            &lt;p&gt;
+                            <input id="opcao2_10" type="radio" name="option" value=0>
+                            a:focus { color: red; }
                         </label>
                         <label onclick="marcarRadio('opcao3_10')">
-                            <input id="opcao3_10" type="radio" name="option" value=0>
-                            &lt;pg&gt;
+                            <input id="opcao3_10" type="radio" name="option" value=1>
+                            a:hover { color: red; }
                         </label>
                         <label onclick="marcarRadio('opcao4_10')">
                             <input id="opcao4_10" type="radio" name="option" value=0>
-                            &lt;text&gt;
+                            a:active { color: red; }
                         </label>
                     </div>
                 </div>
