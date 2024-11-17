@@ -203,3 +203,27 @@ header {
     padding: 0.75em;
     border-radius: 1.2em;
 }
+
+#js span {
+    color: #000000;
+    padding: 0.18em;
+    border-radius: 0.2em;
+    background-color: #E2C430;
+    font-size: 0.8em;
+}
+
+#html span {
+    color: #ffffff;
+    padding: 0.18em;
+    border-radius: 0.2em;
+    background-color: #DE4B25;
+    font-size: 0.8em;
+}
+
+#css span {
+    color: #ffffff;
+    padding: 0.18em;
+    border-radius: 0.2em;
+    background-color: #016AB2;
+    font-size: 0.8em;
+}
