@@ -19,7 +19,7 @@
 }
 
 .sessao {
-    height: 95vh;
+    height: 100vh;
     background-color: #00245C;
 }
 
@@ -208,7 +208,7 @@ header {
     color: #000000;
     padding: 0.18em;
     border-radius: 0.2em;
-    background-color: #E2C430;
+    background-color: #F7DF1E;
     font-size: 0.8em;
 }
 
@@ -216,7 +216,7 @@ header {
     color: #ffffff;
     padding: 0.18em;
     border-radius: 0.2em;
-    background-color: #DE4B25;
+    background-color: #E44D26;
     font-size: 0.8em;
 }
 
@@ -224,6 +224,6 @@ header {
     color: #ffffff;
     padding: 0.18em;
     border-radius: 0.2em;
-    background-color: #016AB2;
+    background-color: #264DE4;
     font-size: 0.8em;
 }

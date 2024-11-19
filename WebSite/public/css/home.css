@@ -61,7 +61,7 @@
 }
 
 .container.sobre div.img {
-    background-image: url('C:/Users/Administrador/Desktop/Git/Meus-repositorios/projeto_individual_dashboard_e_api/WebSite/public/assets/448847749_1212589626405268_910324570910464687_n.jpg');
+    background-image: url('../assets/448847749_1212589626405268_910324570910464687_n.jpg');
     background-size: cover; 
     background-position: top;
     background-repeat: no-repeat;
