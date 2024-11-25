@@ -7,9 +7,10 @@ CREATE TABLE usuario (
     sobrenome varchar(45),
     email varchar(45),
     dtNasc date,
-    telefone char(13),
+    telefone char(14),
     cep char(9),
     numero varchar(4),
+    complemento varchar(45),
     senha varchar(12),
     dtCadastro timestamp default current_timestamp
 ) AUTO_INCREMENT = 1000;
@@ -52,5 +53,7 @@ CREATE TABLE pergunta (
 	CONSTRAINT chk_idPerguntaTeste
 		CHECK (idPergunta <= 10)
 );
+
+SELECT * FROM usuario;
 
 

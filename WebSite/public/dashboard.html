@@ -5,20 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="icon" href="assets/logo_ate.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
     <title>Dashboard</title>
 </head>
 <body>
     <main>
-        <div class="container">
-            <div id="kpis-situacao">
-                <div class="kpi"></div>
-                <div class="kpi"></div>
-                <div class="kpi"></div>
+        <div class="container menu">
+            <div class="img-logo">
+                <h1>ATE</h1>
             </div>
-            <canvas id="projecao_notas"></canvas>
-            <div id="kpis-notas">
-                <div class="kpi"></div>
-                <div class="kpi"></div>
+            <p>Seja bem-vindo(a),<br><b>Lucas Aiello</b></p>
+            <div class="opcoes">
+                <div class="opcao btn">
+                    <p>Testes</p>
+                </div>
+                <div class="opcao">
+                    <p>IDE Online</p>
+                </div>
+                <div class="opcao">
+                    <p>Certificados</p>
+                </div>
+                <div class="opcao">
+                    <p>Meus Dados</p>
+                </div>
+                <div class="opcao sair">
+                    <img src="assets/logout.png" alt="">
+                    <p>Sair</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container dashboard">
+            <div class="sessao">
+                <h1 id="titulo_assuntos">Situação Geral</h1>
+                <div id="kpi_assuntos" class="kpis-geral">
+                    <div id="html" class="kpi">
+                        <h2>HTML</h2>
+                        <p>Ruim</p>
+                    </div>
+                    <div id="css" class="kpi">
+                        <h2>CSS</h2>
+                        <p>Bom</p>
+                    </div>
+                    <div id="js" class="kpi">
+                        <h2>JS</h2>
+                        <p>Muito bom</p>
+                    </div>
+                </div>
+            </div>
+            <div id="div_canvas">
+                <h1>Progessão das Últimas 10 notas</h1>
+                <canvas width="490" height="360" id="projecao_notas"></canvas>
+            </div>
+            <div class="sessao">
+                <div id="kpi_notas" class="kpis-geral">
+                    <div class="kpi">
+                        <h1>Última Nota</h1>
+                        <p>9</p>
+                    </div>
+                    <div class="kpi">
+                        <h1>Média Atual</h1>
+                        <p>8,6</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
