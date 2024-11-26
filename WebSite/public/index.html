@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js"></script>
     <link rel="icon" href="assets/logo_ate.png">
     <title>Home</title>
 </head>
@@ -14,12 +15,11 @@
     <header>
         <div class="container">
             <div class="logo">
-                <span onclick="window.location.href='home.html'">ATE</span>
+                <span onclick="window.location.href='index.html'">ATE</span>
             </div>
             <div class="menu">
-                <a href="home.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="sobre_mim.html">Sobre Mim</a>
-                <a href="tutoriais.html">Tutoriais</a>
                 <a href="testes.html">Testes</a>
                 <a href="#fale_conosco">Contato</a>
             </div>
@@ -38,11 +38,11 @@
             <div class="container">
                 <div class="descricao">
                     <p>Bem vindo a ATE</p>
-                    <h2>Aprenda por meio de Tutoriais e comprove seus conhecimentos através de Testes</h2>
+                    <h2>Experimente a nossa IDE Online e comprove seus conhecimentos através de Testes</h2>
                     <span>Meu compromisso é com o seu aprendizado e a sua evolução em Tecnologia e Desenvolvimento de
                         Software!</span>
-                    <button onclick="window.location.href = 'login.html'" class="btn">
-                        Clique aqui para Iniciar a sua Jornada
+                    <button id="btn_inicio" onclick="window.location.href = 'login.html'" class="btn">
+                        Cadastre-se para ter acesso a essas ferramentas!
                     </button>
                 </div>
                 <div class="logo">
@@ -56,11 +56,10 @@
             <div class="container">
                 <div class="info">
                     <div>
-                        <h2 class="titulo">Tutoriais Técnicos</h2>
+                        <h2 class="titulo">Testes Técnicos</h2>
                         <h2 class="subtitulo">(com certificação)</h2>
                     </div>
-                    <p class="text">Preparei esses tutoriais para que você possa absorver o conteúdo proposto de uma
-                        forma mais prática e consiga posteriormente realizar os testes que comprovam o seu aprendizado.
+                    <p class="text">Preparei alguns testes a respeito das principais linguagens voltadas para o Desenvolvimento Web com o objetivo de você se desafiar e comprovar os seus conhecimentos.
                     </p>
                     <div class="btn-tutoriais">
                         <button class="navegar">
@@ -98,7 +97,29 @@
             </div>
         </div>
 
-        <div class="sessao resultado">
+        <div class="sessao tutoriais">
+            <div class="container">
+                <div class="info">
+                    <div>
+                        <h2 class="titulo">IDE Online</h2>
+                    </div>
+                    <p class="text">Também existe uma seção onde você poderá testar as suas ideias sem precisar instalar nenhum outro software em seu dispositivo, apenas realizando o login nesse mesmo site! 
+                    </p>
+                    <div class="btn-tutoriais ide">
+                        <button class="btn">
+                            Versão Demo
+                        </button>
+                        <button onclick="window.location.href = 'tutoriais.html'" class="btn">
+                            Versão completa
+                        </button>
+                    </div>
+                </div>
+                <div class="logo_coding">
+                </div>
+            </div>
+        </div>
+
+        <div id="resultados_alcancados" class="sessao resultado">
             <div class="container resultado">
                 <h1 class="titulo">Resultados Alcançados</h1>
                 <div class="resultados">
@@ -107,8 +128,8 @@
                             <img src="assets/student.png" alt="">
                         </div>
                         <div class="info">
-                            <h1 class="titulo">200</h1>
-                            <p class="text">Usuários Cadastrados em menos de 3 MESES!</p>
+                            <h1 id="usuarios_cadastrados" class="titulo">0</h1>
+                            <p class="text">Usuários Cadastrados</p>
                         </div>
                     </div>
                     <div class="conquista">
@@ -116,8 +137,8 @@
                             <img src="assets/award.png" alt="">
                         </div>
                         <div class="info">
-                            <h1 class="titulo">346</h1>
-                            <p class="text">Tutoriais Realizados e Certificações Emitidas</p>
+                            <h1 id="tutoriais" class="titulo">0</h1>
+                            <p class="text">Tutoriais Realizados</p>
                         </div>
                     </div>
                     <div class="conquista">
@@ -125,8 +146,8 @@
                             <img src="assets/test.png">
                         </div>
                         <div class="info">
-                            <h1 class="titulo">96</h1>
-                            <p class="text">Aprovações em Testes de Conhecimento</p>
+                            <h1 id="certificacoes" class="titulo">0</h1>
+                            <p class="text">Certificações Emitidas</p>
                         </div>
                     </div>
                 </div>
@@ -142,9 +163,7 @@
                 </div>
                 <div class="feedbacks">
                     <div class="depoimento">
-                        <p class="text">O site é uma mina de ouro para aprender HTML, CSS e JS! Os tutoriais são super
-                            didáticos e bem explicados, cada passo é detalhado de forma que até quem está começando
-                            consegue acompanhar sem problemas.</p>
+                        <p class="text">"Adorei a plataforma! Os testes são bem elaborados e abrangem muitos tópicos. A interface é intuitiva e a IDE online são incríveis para testar códigos em tempo real e, dessa forma, posso conferir o resultado de cada tentativa. O aprendizado é prático e eficiente. Excelente trabalho!"</p>
                         <div class="perfil">
                             <div class="img"></div>
                             <div class="info-perfil">
@@ -154,10 +173,7 @@
                         </div>
                     </div>
                     <div class="depoimento">
-                        <p class="text">Achei incrível a variedade de tutoriais disponíveis. Consegui aprimorar minhas
-                            habilidades em CSS com tutoriais avançados e detalhados, além de estar me aprofundando em
-                            JavaScript, que sempre achei desafiador. O site oferece tanto conteúdo que nunca fico sem
-                            algo novo para aprender.</p>
+                        <p class="text">"Combinar testes e uma IDE online é genial! Os desafios são motivadores e ajudam muito a praticar e reforçar o aprendizado. A plataforma é uma ótima ferramenta para aprimorar habilidades técnicas em Desenvolvimento WEB"</p>
                         <div class="perfil">
                             <div class="img"></div>
                             <div class="info-perfil">
@@ -167,9 +183,7 @@
                         </div>
                     </div>
                     <div class="depoimento">
-                        <p class="text">Eu sempre achei programação algo complicado, mas esse site tornou tudo muito
-                            mais fácil e acessível. A abordagem prática dos tutoriais e os testes ao final de cada
-                            módulo fazem toda a diferença na retenção do conhecimento.</p>
+                        <p class="text">"Plataforma excelente! A IDE facilita muito a prática e as avaliações detalhadas são extremamente úteis. Os testes são uma maneira prática de revisar HTML, CSS e JavaScript. Adorei a experiência e recomendo a todos!"</p>
                         <div class="perfil">
                             <div class="img"></div>
                             <div class="info-perfil">
@@ -233,11 +247,11 @@
 
                 <div class="nav">
                     <h3>Navegue</h3>
-                    <a href="home.html"><li>Home</li></a>
+                    <a href="index.html"><li>Home</li></a>
                     <a href="sobre_mim.html"><li>Sobre Mim</li></a>
                     <a href="tutoriais.html"><li>Tutoriais</li></a>
                     <a href="testes.html"><li>Testes</li></a>
-                    <a href="home.html#fale_conosco"><li>Contato</li></a>
+                    <a href="index.html#fale_conosco"><li>Contato</li></a>
                 </div>
 
                 <div class="nav" id="acompanhe">

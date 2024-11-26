@@ -17,14 +17,14 @@
     <header>
         <div class="container">
             <div class="logo">
-                <span onclick="window.location.href='home.html'">ATE</span>
+                <span onclick="window.location.href='index.html'">ATE</span>
             </div>
             <div class="menu">
-                <a href="home.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="sobre_mim.html">Sobre Mim</a>
                 <a href="tutoriais.html">Tutoriais</a>
                 <a href="testes.html">Testes</a>
-                <a href="home.html#fale_conosco">Contato</a>
+                <a href="index.html#fale_conosco">Contato</a>
             </div>
             <div onclick="window.location.href='login.html'" class="entrar-cadastrar">
                 <div class="text-entrar">
@@ -43,7 +43,7 @@
                 <h2 class="subtitulo">Vamos começar!</h2>
                 <h1 class="titulo">Preencha seus dados</h1>
             </div>
-            <form>
+            <form onsubmit="return false">
                 <div class="campo">
                     <input required type="text" id="input_nome" placeholder="Nome">
                     <input required type="text" id="input_sobrenome" placeholder="Sobrenome">
@@ -67,16 +67,17 @@
                     </div>
                     <div class="senha">
                         <input required type="password" id="input_confirmacao" placeholder="Confirmação">
-                        <img id="img_confirmacao" src="assets/eye-crossed.png" alt="" onclick="trocarTypeSenha('confirmacao')">
+                        <img id="img_confirmacao" src="assets/eye-crossed.png" alt=""
+                            onclick="trocarTypeSenha('confirmacao')">
                     </div>
                 </div>
-                <button type="submit" class="btn">Cadastrar</button>
+                <button type="submit" onclick="cadastrar()" class="btn">Cadastrar</button>
             </form>
             <div class="links">
                 <a href="login.html">Já é cadastrado? Faça o login</a>
             </div>
         </div>
-    </div>           
+    </div>
 
     <footer>
         <div class="container reduzido">
@@ -106,3 +107,93 @@
 </body>
 
 </html>
+
+<!-- <script>
+
+
+
+    // Array para armazenar empresas cadastradas para validação de código de ativação 
+    let listaEmpresasCadastradas = [];
+
+    function cadastrar() {
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nome = input_nome.value
+        var sobrenome = input_nome.value
+        var email = input_email.value
+        var dtNasc = input_dtNasc.value
+        var telefone = input_telefone.value
+        var cep = input_cep.value
+        var numero = input_num.value
+        var complemento = input_complemento.value
+        var senha = input_senha.value
+        var confirmacao = input_confirmacao.value
+
+        const partes_data = dtNasc.split('/')
+        const ano = partes_data[2]
+        const mes = partes_data[1]
+        const dia = partes_data[0]
+        const data_formatada = `${ano}-${mes}-${dia}`
+
+        const data_atual = new Date()
+        const ano_atual = data_atual.getFullYear()
+
+
+        if (ano > 2024 || mes > 12 || dia > 31
+        ) {
+            mostrarPopup('Ops! ☹️','Você preencheu o campo Data de Nascimento incorretamente.','Vou arrumar')
+            return
+        }
+
+        if (ano > ano_atual-12) {
+            mostrarPopup('Ops! ☹️','Você deve ter no mínimo 12 anos para se cadastrar.','Ok')
+            return
+        }
+
+        //Validar senhas fortes!
+
+        if (senha != confirmacao) {
+            mostrarPopup('Ops! ☹️','O campo Senha e o campo Confirmação estão diferentes.','Vou arrumar')
+            return
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
+                sobrenomeServer: sobrenome,
+                emailServer: email,
+                dtNascServer: data_formatada,
+                telefoneServer: telefone,
+                cepServer: cep,
+                numeroServer: numero,
+                complementoServer: complemento,
+                senhaServer: senha
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    mostrarPopup('Muito bom','Seu cadastro foi realizado com sucesso!','Ir para o Login', 'login.html')
+
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
+
+</script> -->

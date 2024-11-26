@@ -109,3 +109,48 @@ form {
     text-decoration: underline;
 }
 
+#meuPopup {
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    border-radius: 0.9em;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 20%;
+    height: 40%;
+    text-align: center;
+}
+
+#meuPopup h2 {
+    color: #000000;
+}
+
+#meuPopup p {
+    color: #727272;
+    font-weight: 450;
+}
+
+
+#fundoEscuro {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+

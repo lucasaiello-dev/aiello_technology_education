@@ -105,6 +105,7 @@
     align-items: center;
     justify-content: center;
     height: 42vh;
+    width: 32%;
 }
 
 .borda {
@@ -308,3 +309,26 @@ footer .container {
     gap: 6.3em;
     margin-inline: 6em;
 }
+
+#ver_todos {
+    padding-inline: 5em;
+}
+
+#btn_inicio {
+    border-radius: 1.3em;
+}
+
+.btn-tutoriais.ide {
+    justify-content: flex-start;
+}
+
+.logo_coding {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    height: 80%;
+    border-radius: 2em;
+    align-items: center;
+    background-color: #00245C;
+}
+

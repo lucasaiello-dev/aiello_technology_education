@@ -17,14 +17,14 @@
     <header>
         <div class="container">
             <div class="logo">
-                <span onclick="window.location.href='home.html'">ATE</span>
+                <span onclick="window.location.href='index.html'">ATE</span>
             </div>
             <div class="menu">
-                <a href="home.html">Home</a>
+                <a href="index.html">Home</a>
                 <a href="sobre_mim.html">Sobre Mim</a>
                 <a href="tutoriais.html">Tutoriais</a>
                 <a href="testes.html">Testes</a>
-                <a href="home.html#fale_conosco">Contato</a>
+                <a href="index.html#fale_conosco">Contato</a>
             </div>
             <div onclick="window.location.href='login.html'" class="entrar-cadastrar">
                 <div class="text-entrar">
@@ -42,7 +42,7 @@
                 <h2 class="subtitulo">Já é cadastrado?</h2>
                 <h1 class="titulo">Faça login e bons estudos</h1>
             </div>
-            <form>
+            <form onsubmit="return false">
                 <div class="campo">
                     <input required type="email" id="input_email" placeholder="E-mail">
                 </div>
@@ -52,7 +52,7 @@
                         <img id="img_senha" src="assets/eye-crossed.png" onclick="trocarTypeSenha('senha')">
                     </div>
                 </div>
-                <button type="submit" class="btn">Entrar</button>
+                <button onclick="entrar()" type="submit" class="btn">Entrar</button>
             </form>
             <div class="links">
                 <a href="cadastro.html">Primeiro Acesso</a>
@@ -87,6 +87,72 @@
         <p>Desenvolvido por Lucas Eduardo Aiello | Estudante do 1° Semestre de Análise e Desenvolvimento de Sistemas
         </p>
     </footer>
+
+    <div id="fundoEscuro"></div>
+
+    <div id="meuPopup">
+        <h2 id="titulo">Este é um Pop-up!</h2>
+        <p id="mensagem">Conteúdo do pop-up vai aqui.</p>
+        <button id="btn_pupup" class="btn" onclick="fecharPopup()">Vou arrumar :)</button>
+    </div>
+
 </body>
 
 </html>
+
+<!-- <script>
+
+    function entrar() {
+
+        var emailVar = input_email.value;
+        var senhaVar = input_senha.value;
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    console.log()
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000);
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    mostrarPopup('Ops! ☹️',texto,'Ok','')
+            return
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+</script> -->
