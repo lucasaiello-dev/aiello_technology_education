@@ -60,7 +60,12 @@
     font-size: 0.9em;
 }
 
+.container.sobre {
+    flex-direction: row-reverse;
+}
+
 .container.sobre div.img {
+    border-radius: 2.5em 0 0 10em;
     background-image: url('../assets/448847749_1212589626405268_910324570910464687_n.jpg');
     background-size: cover; 
     background-position: top;
@@ -323,12 +328,20 @@ footer .container {
 }
 
 .logo_coding {
-    width: 50%;
+    width: 41%;
     display: flex;
     justify-content: center;
     height: 80%;
     border-radius: 2em;
     align-items: center;
     background-color: #00245C;
+}
+
+.container.ide {
+    flex-direction: row-reverse;
+}
+
+.info.ide {
+    width: 51%;
 }
 

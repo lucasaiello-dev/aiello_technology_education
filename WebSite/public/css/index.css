@@ -58,7 +58,7 @@ button {
     text-decoration: none;
     color: #000000;
     padding: 1em;
-    transition: margin 0.3s ease, transform 0.3s ease;
+    transition: margin 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
     border: 0;
     border-radius: 0.3em;
 }
@@ -194,7 +194,7 @@ main {
 }
 
 .info {
-    width: 40%;
+    width: 42%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -385,4 +385,15 @@ div.imgs-logo {
 .nav#acompanhe li {
     list-style-type: none;
     text-transform: none;
+}
+
+a#link_ide {
+    background-color: #4FB1FF;
+    color: #ffffff;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em;
+}
+
+a#link_ide:hover {
+    background-color: #00245C;
 }
