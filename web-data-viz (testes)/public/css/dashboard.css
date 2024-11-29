@@ -17,13 +17,13 @@ main {
 }
 
 .container {
-    width: 90%;
-    height: 80%;
+    width: 80%;
+    height: 100%;
     background-color: #FFFFFF;
-    border-radius: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: opacity 0.2s ease;
 }
 
 .sessao {
@@ -179,6 +179,7 @@ main {
 }
 
 .container.dashboard {
+    border-radius: 1em;
     width: 75%;
     height: 85%;
     background-color: #ffffff00;
@@ -187,7 +188,7 @@ main {
 
 .container.menu {
     height: 100%;
-    width: 21%;
+    width: 20%;
     border-radius: 0;
     flex-direction: column;
     text-align: center;
@@ -209,4 +210,142 @@ main {
 #div_canvas h1 {
     font-size: 1.3em;
     text-transform: uppercase;
+}
+
+.esconder {
+    display: none !important;
+}
+
+#menu_testes {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.assunto {
+    width: 27%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#testes {
+    justify-content: center;
+    gap: 0.4em;
+    background-color: #00245C;
+    flex-direction: column;
+}
+
+.bloco {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.4em;
+    background-color: #E44D26;
+    border-radius: 0.9em;
+    cursor: pointer;
+}
+
+.bloco p {
+    font-size: 1.1em;
+}
+
+.bloco h1 {
+    font-size: 1.9em;
+}
+
+.html .bloco {
+    color: #FFFFFF;
+    background-color: #E44D26;
+}
+
+.css .bloco {
+    color: #FFFFFF;
+    background-color: #264DE4;
+}
+
+.js .bloco {
+    color: #000000;
+    background-color: #F7DF1E;
+}
+
+#instrucao_teste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 1.3em;
+}
+
+#boa_sorte {
+    font-weight: 550;
+}
+
+#meuPopup {
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    border-radius: 0.9em;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+    width: 20%;
+    height: 45%;
+    text-align: center;
+}
+
+#meuPopup h2 {
+    color: #000000;
+}
+
+#meuPopup p {
+    color: #727272;
+    font-weight: 450;
+}
+
+
+#fundoEscuro {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+.btn {
+    background-color: #4FB1FF;
+    border: 0;
+    border-radius: 16px;
+    padding: 0.95em;
+    padding-inline: 1.7em;
+    color: #FFFFFF;
+    font-weight: 650;
+    font-size: 0.9em;
+    cursor: pointer;
 }

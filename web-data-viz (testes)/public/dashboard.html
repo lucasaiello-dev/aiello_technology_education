@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="icon" href="assets/logo_ate.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/index.js"></script>
     <script src="js/dashboard.js"></script>
     <title>Dashboard</title>
 </head>
-<body onload="recolherDadosUsuario()"> 
+
+<body onload="recolherDadosUsuario()">
     <main>
         <div class="container menu">
             <div class="img-logo">
@@ -17,26 +20,23 @@
             </div>
             <p>Seja bem-vindo(a),<br><b id="usuario">Lucas Aiello</b></p>
             <div class="opcoes">
-                <div class="opcao btn">
-                    <p onclick="window.location.href='testes/html_01.html'">Testes</p>
+                <div class="opcao" onclick="trocarTela('dashboard')">
+                    <p>Dashboard</p>
                 </div>
-                <div class="opcao">
+                <div class="opcao" onclick="trocarTela('testes')">
+                    <p>Testes</p>
+                </div>
+                <div class="opcao" onclick="trocarTela('ide_online')">
                     <p>IDE Online</p>
                 </div>
-                <div class="opcao">
-                    <p>Certificados</p>
-                </div>
-                <div class="opcao">
-                    <p>Meus Dados</p>
-                </div>
-                <div class="opcao sair">
+                <div class="opcao sair" onclick="sairDaConta()">
                     <img src="assets/logout.png" alt="">
                     <p>Sair</p>
                 </div>
             </div>
         </div>
 
-        <div class="container dashboard">
+        <div id="dashboard" class="container dashboard">
             <div class="sessao">
                 <h1 id="titulo_assuntos">Situação Geral</h1>
                 <div id="kpi_assuntos" class="kpis-geral">
@@ -71,8 +71,65 @@
                 </div>
             </div>
         </div>
+
+        <div id="testes" class="container esconder">
+
+            <div id="menu_testes">
+                <div class="assunto html">
+                    <div onclick="irParaTeste(1,'testes/html_01.html')" class="bloco">
+                        <h1>HTML | Nível 01</h1>
+                        <p>Melhor Nota: <b>9</b></p>
+                    </div>
+                    <div onclick="irParaTeste(2,'testes/html_02.html')" class="bloco">
+                        <h1>HTML | Nível 02</h1>
+                        <p>Melhor Nota: <b>9</b></p>
+                    </div>
+                </div>
+    
+                <div class="assunto css">
+                    <div onclick="irParaTeste(3,'testes/css_01.html')" class="bloco">
+                        <h1>CSS | Nível 01</h1>
+                        <p>Melhor Nota: <b>9</b></p>
+                    </div>
+                    <div onclick="irParaTeste(4,'testes/css_02.html')" class="bloco">
+                        <h1>CSS | Nível 02</h1>
+                        <p>Melhor Nota: <b>9</b></p>
+                    </div>
+                </div>
+    
+                <div onclick="irParaTeste(5,'testes/js_01.html')" class="assunto js">
+                    <div class="bloco">
+                        <h1>JS | Nível 01</h1>
+                        <p>Melhor Nota: <b>9</b></p>
+                    </div>
+                    <div onclick="irParaTeste(6,'testes/js_02.html')" class="bloco">
+                        <h1>JS | Nível 02</h1>
+                        <p>Melhor Nota: <b>9</b></p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="instrucao_teste">
+                <p>Selecione o teste que deseja realizar</p>
+                <p id="boa_sorte">Boa sorte! 😊</p>
+            </div>
+        </div>
+
+
+        <div id="ide_online" class="container esconder">
+
+        </div>
+
+        <div id="meuPopup">
+            <h2 id="titulo">Este é um Pop-up!</h2>
+            <p id="mensagem">Conteúdo do pop-up vai aqui.</p>
+            <button id="btn_popup" class="btn" onclick="fecharPopup()">Vou arrumar :)</button>
+        </div>
+    
+        <div id="fundoEscuro"></div>
     </main>
 </body>
+
 </html>
 
 <script>
@@ -80,8 +137,8 @@
     function recolherDadosUsuario() {
         const nome = sessionStorage.getItem('NOME_USUARIO')
         console.log(nome)
-        
-        const elemento_nome = document.getElementById('usuario'+'!')
+
+        const elemento_nome = document.getElementById('usuario' + '!')
         elemento_nome.innerHTML = nome
     }
 

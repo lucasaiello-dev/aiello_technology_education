@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/testes_tecnicos.css">
+    <link rel="icon" href="../assets/logo_ate.png">
+    <script src="../js/testes_tecnicos.js"></script>
+    <title>JavaScript | Nível 01</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span onclick="window.location.href='../index.html'">ATE</span>
+            </div>
+            <div class="menu">
+                <a href="../index.html">Home</a>
+                <a href="../sobre_mim.html">Sobre Mim</a>
+                <a href="../tutoriais.html">Tutoriais</a>
+                <a href="../testes.html">Testes</a>
+                <a href="../index.html#fale_conosco">Contato</a>
+            </div>
+            <div onclick="window.location.href='../login.html'" class="entrar-cadastrar">
+                <div class="text-entrar">
+                    <span>Entrar /</span>
+                    <span>Cadastrar</span>
+                </div>
+                <img src="../assets/user.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="sessao">
+        <div class="container">
+            <h1 id="js" class="titulo"> <span>JavaScript</span> | Nível 01</h1>
+            <div class="progress-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <form onsubmit="return false">
+                <div id="div_inicio_teste" class="questao">
+                    <p onclick="iniciarTeste()" id="inicio_teste">Clique aqui para iniciar!</p>
+                </div>
+
+                <div id="1" class="questao esconder">
+                    <h3 class="enunciado">Qual é a principal característica de uma variável declarada como const em JavaScript?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_1')">
+                            <input id="opcao1_1" type="radio" name="option" value=0>
+                            Não pode ser usada em loops
+                        </label>
+                        <label onclick="marcarRadio('opcao2_1')">
+                            <input id="opcao2_1" type="radio" name="option" value=0>
+                            Pode ser redeclarada dentro do mesmo escopo
+                        </label>
+                        <label onclick="marcarRadio('opcao3_1')">
+                            <input id="opcao3_1" type="radio" name="option" value=1>
+                            Seu valor não pode ser reatribuído
+                        </label>
+                        <label onclick="marcarRadio('opcao4_1')">
+                            <input id="opcao4_1" type="radio" name="option" value=0>
+                            Só pode armazenar valores numéricos
+                        </label>
+                    </div>
+                </div>
+
+                <div id="2" class="questao esconder">
+                    <h3 class="enunciado">Marque a sintaxe correta para uma estrutura condicional if e else em JavaScript
+                    </h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_2')">
+                            <input id="opcao1_2" type="radio" name="option" value=0>
+                            if x > 5 then { // código } else { // código }
+                        </label>
+                        <label onclick="marcarRadio('opcao2_2')">
+                            <input id="opcao2_2" type="radio" name="option" value=1>
+                            if (x > 5) { // código } else { // código }
+                        </label>
+                        <label onclick="marcarRadio('opcao3_2')">
+                            <input id="opcao3_2" type="radio" name="option" value=0>
+                            if (x > 5) { // código } else then { // código }
+                        </label>
+                        <label onclick="marcarRadio('opcao4_2')">
+                            <input id="opcao4_2" type="radio" name="option" value=0>
+                            if (x > 5) { // código } or else { // código }
+                        </label>
+                    </div>
+                </div>
+
+                <div id="3" class="questao esconder">
+                    <h3 class="enunciado">Qual operador lógico é usado para combinar duas condições que devem ser ambas verdadeiras?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_3')">
+                            <input id="opcao1_3" type="radio" name="option" value=1>
+                            &&
+                        </label>
+                        <label onclick="marcarRadio('opcao2_3')">
+                            <input id="opcao2_3" type="radio" name="option" value=0>
+                            ||
+                        </label>
+                        <label onclick="marcarRadio('opcao3_3')">
+                            <input id="opcao3_3" type="radio" name="option" value=0>
+                            !
+                        </label>
+                        <label onclick="marcarRadio('opcao4_3')">
+                            <input id="opcao4_3" type="radio" name="option" value=0>
+                            ==
+                        </label>
+                    </div>
+                </div>
+
+                <div id="4" class="questao esconder">
+                    <h3 class="enunciado">Qual operador aritmético é usado para multiplicação?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_4')">
+                            <input id="opcao1_4" type="radio" name="option" value=0>
+                            x
+                        </label>
+                        <label onclick="marcarRadio('opcao2_4')">
+                            <input id="opcao2_4" type="radio" name="option" value=1>
+                            *
+                        </label>
+                        <label onclick="marcarRadio('opcao3_4')">
+                            <input id="opcao3_4" type="radio" name="option" value=0>
+                            ^
+                        </label>
+                        <label onclick="marcarRadio('opcao4_4')">
+                            <input id="opcao4_4" type="radio" name="option" value=0>
+                            %
+                        </label>
+                    </div>
+                </div>
+
+                <div id="5" class="questao esconder">
+                    <h3 class="enunciado">Qual é o resultado de 10 % 3 em JavaScript?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_5')">
+                            <input id="opcao1_5" type="radio" name="option" value=0>
+                            3
+                        </label>
+                        <label onclick="marcarRadio('opcao2_5')">
+                            <input id="opcao2_5" type="radio" name="option" value=1>
+                            1
+                        </label>
+                        <label onclick="marcarRadio('opcao3_5')">
+                            <input id="opcao3_5" type="radio" name="option" value=0>
+                            0
+                        </label>
+                        <label onclick="marcarRadio('opcao4_5')">
+                            <input id="opcao4_5" type="radio" name="option" value=0>
+                            10
+                        </label>
+                    </div>
+                </div>
+
+                <div id="6" class="questao esconder">
+                    <h3 class="enunciado">Qual é o resultado de 5 + "5" em JavaScript?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_6')">
+                            <input id="opcao1_6" type="radio" name="option" value=0>
+                            undefined
+                        </label>
+                        <label onclick="marcarRadio('opcao2_6')">
+                            <input id="opcao2_6" type="radio" name="option" value=0>
+                            null
+                        </label>
+                        <label onclick="marcarRadio('opcao3_6')">
+                            <input id="opcao3_6" type="radio" name="option" value=0>
+                            10
+                        </label>
+                        <label onclick="marcarRadio('opcao4_6')">
+                            <input id="opcao4_6" type="radio" name="option" value=1>
+                            "55"
+                        </label>
+                    </div>
+                </div>
+
+                <div id="7" class="questao esconder">
+                    <h3 class="enunciado">Qual é o comportamento de uma variável declarada como var dentro de uma função?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_7')">
+                            <input id="opcao1_7" type="radio" name="option" value=1>
+                            A variável tem escopo local à função e não pode ser acessada fora dela
+                        </label>
+                        <label onclick="marcarRadio('opcao2_7')">
+                            <input id="opcao2_7" type="radio" name="option" value=0>
+                            A variável tem escopo global e pode ser acessada fora da função
+                        </label>
+                        <label onclick="marcarRadio('opcao3_7')">
+                            <input id="opcao3_7" type="radio" name="option" value=0>
+                            A variável não é redefinida a cada chamada da função
+                        </label>
+                        <label onclick="marcarRadio('opcao4_7')">
+                            <input id="opcao4_7" type="radio" name="option" value=0>
+                            A variável só pode ser usada para armazenar textos
+                        </label>
+                    </div>
+                </div>
+
+                <div id="8" class="questao esconder">
+                    <h3 class="enunciado">Em qual situação é recomendado usar uma variável global em JavaScript?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_8')">
+                            <input id="opcao1_8" type="radio" name="option" value=0>
+                            Quando a variável só será usada dentro de um único bloco de código
+                        </label>
+                        <label onclick="marcarRadio('opcao2_8')">
+                            <input id="opcao2_8" type="radio" name="option" value=0>
+                            Quando a variável só será usada dentro de uma função específica
+                        </label>
+                        <label onclick="marcarRadio('opcao3_8')">
+                            <input id="opcao3_8" type="radio" name="option" value=0>
+                            Quando a variável precisa ser reatribuída dentro de um loop
+                        </label>
+                        <label onclick="marcarRadio('opcao4_8')">
+                            <input id="opcao4_8" type="radio" name="option" value=1>
+                            Quando o valor da variável precisa ser acessado e modificado por várias funções ao longo do código
+                        </label>
+                    </div>
+                </div>
+
+                <div id="9" class="questao esconder">
+                    <h3 class="enunciado">Você tem uma variável isLoggedIn que indica se um usuário está logado ou não, qual estrutura você usaria para executar um bloco de código apenas quando o usuário estiver logado?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_9')">
+                            <input id="opcao1_9" type="radio" name="option" value=0>
+                            if (!isLoggedIn) { // código }
+                        </label>
+                        <label onclick="marcarRadio('opcao2_9')">
+                            <input id="opcao2_9" type="radio" name="option" value=1>
+                            if (isLoggedIn) { // código }
+                        </label>
+                        <label onclick="marcarRadio('opcao3_9')">
+                            <input id="opcao3_9" type="radio" name="option" value=0>
+                            if (isLoggedIn === false) { // código }
+                        </label>
+                        <label onclick="marcarRadio('opcao4_9')">
+                            <input id="opcao4_9" type="radio" name="option" value=0>
+                            if (isLoggedIn != true) { // código }
+                        </label>
+                    </div>
+                </div>
+
+                <div id="10" class="questao esconder">
+                    <h3 class="enunciado">Qual é a sintaxe correta para declarar uma função chamada saudar que exibe a mensagem "Olá, mundo!" no console?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_10')">
+                            <input id="opcao1_10" type="radio" name="option" value=0>
+                            function: saudar() { console.log("Olá, mundo!"); }
+                        </label>
+                        <label onclick="marcarRadio('opcao2_10')">
+                            <input id="opcao2_10" type="radio" name="option" value=0>
+                            var saudar = function { console.log("Olá, mundo!"); }
+                        </label>
+                        <label onclick="marcarRadio('opcao3_10')">
+                            <input id="opcao3_10" type="radio" name="option" value=1>
+                            function saudar() { console.log("Olá, mundo!"); }
+                        </label>
+                        <label onclick="marcarRadio('opcao4_10')">
+                            <input id="opcao4_10" type="radio" name="option" value=0>
+                            saudar() { console.log("Olá, mundo!"); }
+                        </label>
+                    </div>
+                </div>
+
+                <div class="questao esconder" id="11">
+                    <h1 class="subtitulo">
+                        Resultados Alcançados
+                    </h1>
+                    <div class="fim-resultados">
+                        <div class="resultado">
+                            <p>Acertos</p>
+                            <span id="acertos">6</span>
+                        </div>
+                        <div class="resultado">
+                            <p>Erros</p>
+                            <span id="erros">6</span>
+                        </div>
+                    </div>
+                    <div class="menu-teste">
+                        <button onclick="window.location.href='../testes.html'" class="btn">Voltar aos testes</button>
+                        <button onclick="location.reload()" class="btn">Tentar novamente</button>
+                    </div>
+                </div>
+
+                <div class="btn-div">
+                    <button id="btn_form" onclick="validarResposta()" class="btn esconder">Próxima Pergunta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

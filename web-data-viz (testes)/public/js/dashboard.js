@@ -43,4 +43,35 @@ document.addEventListener('DOMContentLoaded', function () {
 }
 
     new Chart(canvas_grafico, config)
+
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    telaAtual = document.getElementById('dashboard')
+})
+
+var telaAtual
+
+function trocarTela(proximaTela = '') {
+    const tela = document.getElementById(proximaTela)
+
+    telaAtual.classList.add('esconder')
+
+    tela.classList.remove('esconder')
+    tela.style.opacity = 0
+    setTimeout(() => {tela.style = 'opacity: 100%'}, 250)
+
+    telaAtual = tela
+}
+
+function sairDaConta() {
+    sessionStorage.clear()
+
+    window.location.href='index.html'
+}
+
+function irParaTeste(fkTeste = 0, caminhoTeste = '') {
+    mostrarPopup('Você está preparado? 🤔','Agora iremos te redirecionar para o teste que você escolheu','Iniciar o Teste', caminhoTeste)
+
+    sessionStorage.FK_TESTE = fkTeste
+}

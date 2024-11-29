@@ -138,7 +138,7 @@ function contarAcertos() {
 }
 
 function contarErros() {
-    const qtd_erros = listaAcertos.length - contarAcertos()
+    const qtd_erros = listaAcertos.length - qtd_acertos
     return qtd_erros
 }
 
