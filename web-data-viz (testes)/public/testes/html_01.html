@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/testes_tecnicos.css">
+    <link rel="icon" href="../assets/logo_ate.png">
+    <script src="../js/testes_tecnicos.js"></script>
+    <title>HTML | Nível 01</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span onclick="window.location.href='../index.html'">ATE</span>
+            </div>
+            <div class="menu">
+                <a href="../index.html">Home</a>
+                <a href="../sobre_mim.html">Sobre Mim</a>
+                <a href="../tutoriais.html">Tutoriais</a>
+                <a href="../testes.html">Testes</a>
+                <a href="../index.html#fale_conosco">Contato</a>
+            </div>
+            <div onclick="window.location.href='../login.html'" class="entrar-cadastrar">
+                <div class="text-entrar">
+                    <span>Entrar /</span>
+                    <span>Cadastrar</span>
+                </div>
+                <img src="../assets/user.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="sessao">
+        <div class="container">
+            <h1 id="html" class="titulo"> <span>HTML</span> | Nível 01</h1>
+            <div class="progress-container" id="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <form onsubmit="return false">
+                <div id="div_inicio_teste" class="questao">
+                    <p onclick="iniciarTeste()" id="inicio_teste">Clique aqui para iniciar!</p>
+                </div>
+
+                <div id="1" class="questao esconder">
+                    <h3 class="enunciado">Qual é o Significado de HTML?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_1')">
+                            <input id="opcao1_1" type="radio" name="option" value=0>
+                            Hyperlink and Text Markup Language
+                        </label>
+                        <label onclick="marcarRadio('opcao2_1')">
+                            <input id="opcao2_1" type="radio" name="option" value=1>
+                            HyperText Markup Language
+                        </label>
+                        <label onclick="marcarRadio('opcao3_1')">
+                            <input id="opcao3_1" type="radio" name="option" value=0>
+                            Host Transfer Markup Language
+                        </label>
+                        <label onclick="marcarRadio('opcao4_1')">
+                            <input id="opcao4_1" type="radio" name="option" value=0>
+                            HighText Markup Language
+                        </label>
+                    </div>
+                </div>
+
+                <div id="2" class="questao esconder">
+                    <h3 class="enunciado">Qual é a forma correta de indicar a abertura e o fechamento do código HTML?
+                    </h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_2')">
+                            <input id="opcao1_2" type="radio" name="option" value=1>
+                            &lt;html&gt;&lt;/html&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao2_2')">
+                            <input id="opcao2_2" type="radio" name="option" value=0>
+                            &lt;body&gt;&lt;/body&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao3_2')">
+                            <input id="opcao3_2" type="radio" name="option" value=0>
+                            [html] [/html]
+                        </label>
+                        <label onclick="marcarRadio('opcao4_2')">
+                            <input id="opcao4_2" type="radio" name="option" value=0>
+                            &lt;start&gt;&lt;/end&gt;
+                        </label>
+                    </div>
+                </div>
+
+                <div id="3" class="questao esconder">
+                    <h3 class="enunciado">Marque a alternativa que contém apenas tags de texto.</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_3')">
+                            <input id="opcao1_3" type="radio" name="option" value=1>
+                            &lt;h1&gt; &lt;p&gt; &lt;span&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao2_3')">
+                            <input id="opcao2_3" type="radio" name="option" value=0>
+                            &lt;div&gt; &lt;ul&gt; &lt;ol&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao3_3')">
+                            <input id="opcao3_3" type="radio" name="option" value=0>
+                            &lt;table&gt; &lt;tr&gt; &lt;td&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao4_3')">
+                            <input id="opcao4_3" type="radio" name="option" value=0>
+                            &lt;input&gt; &lt;button&gt; &lt;form&gt;
+                        </label>
+                    </div>
+                </div>
+
+                <div id="4" class="questao esconder">
+                    <h3 class="enunciado">Qual das tags abaixo permite colocar textos em negrito?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_4')">
+                            <input id="opcao1_4" type="radio" name="option" value=0>
+                            &lt;i&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao2_4')">
+                            <input id="opcao2_4" type="radio" name="option" value=1>
+                            &lt;b&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao3_4')">
+                            <input id="opcao3_4" type="radio" name="option" value=0>
+                            &lt;u&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao4_4')">
+                            <input id="opcao4_4" type="radio" name="option" value=0>
+                            &lt;em&gt;
+                        </label>
+                    </div>
+                </div>
+
+                <div id="5" class="questao esconder">
+                    <h3 class="enunciado">Marque a alternativa em que a tag h1 está sendo utilizada corretamente.</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_5')">
+                            <input id="opcao1_5" type="radio" name="option" value=0>
+                            &lt;h1&gt;Este é um título de nível 1
+                        </label>
+                        <label onclick="marcarRadio('opcao2_5')">
+                            <input id="opcao2_5" type="radio" name="option" value=0>
+                            &lt;h1 Este é um título de nível 1&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao3_5')">
+                            <input id="opcao3_5" type="radio" name="option" value=1>
+                            &lt;h1&gt;Este é um título de nível 1&lt;/h1&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao4_5')">
+                            <input id="opcao4_5" type="radio" name="option" value=0>
+                            &lt;h1&gt; title="Título de Nível 1">Este é um título de nível 1&lt;/h1&gt;
+                        </label>
+                    </div>
+                </div>
+
+                <div id="6" class="questao esconder">
+                    <h3 class="enunciado">Qual é o local onde devemos colocar o título da aba usando a tag &lt;title&gt;
+                        no HTML?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_6')">
+                            <input id="opcao1_6" type="radio" name="option" value=0>
+                            &lt;body&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao2_6')">
+                            <input id="opcao2_6" type="radio" name="option" value=0>
+                            &lt;header&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao3_6')">
+                            <input id="opcao3_6" type="radio" name="option" value=1>
+                            &lt;head&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao4_6')">
+                            <input id="opcao4_6" type="radio" name="option" value=0>
+                            &lt;footer&gt;
+                        </label>
+                    </div>
+                </div>
+
+                <div id="7" class="questao esconder">
+                    <h3 class="enunciado">Para que é usada a tag &lt;link&gt; no HTML?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_7')">
+                            <input id="opcao1_7" type="radio" name="option" value=0>
+                            Para adicionar links clicáveis dentro do conteúdo
+                        </label>
+                        <label onclick="marcarRadio('opcao2_7')">
+                            <input id="opcao2_7" type="radio" name="option" value=1>
+                            Para vincular folhas de estilo externas ou outros recursos
+                        </label>
+                        <label onclick="marcarRadio('opcao3_7')">
+                            <input id="opcao3_7" type="radio" name="option" value=0>
+                            Para criar ancoras dentro da página
+                        </label>
+                        <label onclick="marcarRadio('opcao4_7')">
+                            <input id="opcao4_7" type="radio" name="option" value=0>
+                            Para definir títulos e metadados
+                        </label>
+                    </div>
+                </div>
+
+                <div id="8" class="questao esconder">
+                    <h3 class="enunciado">Para que serve a tag &lt;main&gt; no HTML?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_8')">
+                            <input id="opcao1_8" type="radio" name="option" value=0>
+                            Para definir o cabeçalho principal do documento
+                        </label>
+                        <label onclick="marcarRadio('opcao2_8')">
+                            <input id="opcao2_8" type="radio" name="option" value=0>
+                            Para definir a navegação principal do documento
+                        </label>
+                        <label onclick="marcarRadio('opcao3_8')">
+                            <input id="opcao3_8" type="radio" name="option" value=1>
+                            Para incluir o conteúdo principal de um documento
+                        </label>
+                        <label onclick="marcarRadio('opcao4_8')">
+                            <input id="opcao4_8" type="radio" name="option" value=0>
+                            Para definir o rodapé do documento
+                        </label>
+                    </div>
+                </div>
+
+                <div id="9" class="questao esconder">
+                    <h3 class="enunciado">Qual é a diferença entre as tags &lt;header&gt; e &lt;head&gt; no HTML?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_9')">
+                            <input id="opcao1_9" type="radio" name="option" value=0>
+                            A tag &lt;header&gt; é usada para incluir metadados e a tag &lt;head&gt; é usada para
+                            incluir o cabeçalho da página
+                        </label>
+                        <label onclick="marcarRadio('opcao2_9')">
+                            <input id="opcao2_9" type="radio" name="option" value=0>
+                            Não existe nenhuma diferença
+                        </label>
+                        <label onclick="marcarRadio('opcao3_9')">
+                            <input id="opcao3_9" type="radio" name="option" value=1>
+                            &lt;header&gt; é usada para definir o cabeçalho de uma seção e a tag &lt;head&gt; é usada
+                            para incluir metadados e links para recursos externos
+                        </label>
+                        <label onclick="marcarRadio('opcao4_9')">
+                            <input id="opcao4_9" type="radio" name="option" value=0>
+                            &lt;header&gt; e a tag &lt;head&gt; têm a mesma funcionalidade e podem ser usadas de forma
+                            intercambiável
+                        </label>
+                    </div>
+                </div>
+
+                <div id="10" class="questao esconder">
+                    <h3 class="enunciado">Qual tag é usada para criar um parágrafo em HTML?</h3>
+                    <div class="opcoes">
+                        <label onclick="marcarRadio('opcao1_10')">
+                            <input id="opcao1_10" type="radio" name="option" value=0>
+                            &lt;par&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao2_10')">
+                            <input id="opcao2_10" type="radio" name="option" value=1>
+                            &lt;p&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao3_10')">
+                            <input id="opcao3_10" type="radio" name="option" value=0>
+                            &lt;pg&gt;
+                        </label>
+                        <label onclick="marcarRadio('opcao4_10')">
+                            <input id="opcao4_10" type="radio" name="option" value=0>
+                            &lt;text&gt;
+                        </label>
+                    </div>
+                </div>
+
+                <div class="questao esconder" id="11">
+                    <h1 class="subtitulo">
+                        Resultados Alcançados
+                    </h1>
+                    <div class="fim-resultados">
+                        <div class="resultado">
+                            <p>Acertos</p>
+                            <span id="acertos">6</span>
+                        </div>
+                        <div class="resultado">
+                            <p>Erros</p>
+                            <span id="erros">6</span>
+                        </div>
+                    </div>
+                    <div class="menu-teste">
+                        <button onclick="window.location.href='../testes.html'" class="btn">Voltar aos testes</button>
+                        <button onclick="location.reload()" class="btn">Tentar novamente</button>
+                    </div>
+                </div>
+
+                <div class="btn-div">
+                    <button id="btn_form" onclick="validarResposta()" class="btn esconder">Próxima Pergunta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="assets/logo_ate.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="js/cadastro.js"></script>
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span onclick="window.location.href='index.html'">ATE</span>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="sobre_mim.html">Sobre Mim</a>
+                <a id="link_ide" href="ide_online.html">IDE Online</a>
+                <a href="testes.html">Testes</a>
+                <a href="index.html#fale_conosco">Contato</a>
+            </div>
+            <div onclick="window.location.href='login.html'" class="entrar-cadastrar">
+                <div class="text-entrar">
+                    <span>Entrar /</span>
+                    <span>Cadastrar</span>
+                </div>
+                <img src="assets/user.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="sessao login cadastro">
+        <div id="div_cadastro" class="container cadastro">
+
+            <div class="titulos">
+                <h2 class="subtitulo">Vamos começar!</h2>
+                <h1 class="titulo">Preencha seus dados</h1>
+            </div>
+            <form onsubmit="return false">
+                <div class="campo">
+                    <input required type="text" id="input_nome" placeholder="Nome">
+                    <input required type="text" id="input_sobrenome" placeholder="Sobrenome">
+                </div>
+                <div class="campo">
+                    <input required type="email" id="input_email" placeholder="E-mail">
+                    <input required type="text" id="input_dtNasc" placeholder="Data de Nascimento" class="reduzido">
+                </div>
+                <div class="campo">
+                    <input required type="text" id="input_telefone" placeholder="Telefone">
+                    <input required type="text" id="input_cep" placeholder="CEP">
+                </div>
+                <div class="campo">
+                    <input class="reduzido" required type="number" id="input_num" placeholder="N°">
+                    <input required type="text" id="input_complemento" placeholder="Complemento">
+                </div>
+                <div class="campo">
+                    <div class="senha">
+                        <input required type="password" id="input_senha" placeholder="Senha">
+                        <img id="img_senha" src="assets/eye-crossed.png" onclick="trocarTypeSenha('senha')">
+                    </div>
+                    <div class="senha">
+                        <input required type="password" id="input_confirmacao" placeholder="Confirmação">
+                        <img id="img_confirmacao" src="assets/eye-crossed.png" alt=""
+                            onclick="trocarTypeSenha('confirmacao')">
+                    </div>
+                </div>
+                <button type="submit" onclick="cadastrar()" class="btn">Cadastrar</button>
+            </form>
+            <div class="links">
+                <a href="login.html">Já é cadastrado? Faça o login</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container reduzido">
+            <div class="logo-reduzido">
+                <h1>Aiello</h1>
+                <h3>Technology Education</h3>
+            </div>
+            <div class="parte-reduzido">
+                <h1 class="titulo">Nos Acompanhe</h1>
+                <div class="imgs-logo">
+                    <img src="assets/facebook.png" alt="">
+                    <img src="assets/instagram.png" alt="">
+                    <img src="assets/linkedin-logo.png" alt="">
+                </div>
+            </div>
+            <div class="parte-reduzido">
+                <h1 class="titulo" id="fale_conosco">Fale Conosco</h1>
+                <div class="text-reduzido">
+                    <span>(16) 99763-4968</span>
+                    <span>aiellotech@gmail.com</span>
+                </div>
+            </div>
+        </div>
+        <p>Desenvolvido por Lucas Eduardo Aiello | Estudante do 1° Semestre de Análise e Desenvolvimento de Sistemas
+        </p>
+    </footer>
+
+    <div id="meuPopup">
+        <h2 id="titulo">Este é um Pop-up!</h2>
+        <p id="mensagem">Conteúdo do pop-up vai aqui.</p>
+        <button id="btn_popup" class="btn" onclick="fecharPopup()">Vou arrumar :)</button>
+    </div>
+
+    <div id="fundoEscuro"></div>
+
+</body>
+
+</html>
+
+<script>
+
+
+
+    // Array para armazenar empresas cadastradas para validação de código de ativação 
+    let listaEmpresasCadastradas = [];
+
+    function cadastrar() {
+
+        var nome = input_nome.value
+        var sobrenome = input_nome.value
+        var email = input_email.value
+        var dtNasc = input_dtNasc.value
+        var telefone = input_telefone.value
+        var cep = input_cep.value
+        var numero = input_num.value
+        var complemento = input_complemento.value
+        var senha = input_senha.value
+        var confirmacao = input_confirmacao.value
+
+        const partes_data = dtNasc.split('/')
+        const ano = partes_data[2]
+        const mes = partes_data[1]
+        const dia = partes_data[0]
+        const data_formatada = `${ano}-${mes}-${dia}`
+
+        const data_atual = new Date()
+        const ano_atual = data_atual.getFullYear()
+
+
+        if (ano > 2024 || ano == '00' || mes > 12 || mes == '00' || dia > 31 || dia == '00'
+        ) {
+            mostrarPopup('Ops! ☹️','Você preencheu o campo Data de Nascimento incorretamente.','Vou arrumar')
+            return
+        }
+
+        if (ano > ano_atual-12) {
+            mostrarPopup('Ops! ☹️','Você deve ter no mínimo 12 anos para se cadastrar.','Ok')
+            return
+        }
+
+        //Validar senhas fortes!
+
+        if (senha != confirmacao) {
+            mostrarPopup('Ops! ☹️','O campo Senha e o campo Confirmação estão diferentes.','Vou arrumar')
+            return
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuario/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
+                sobrenomeServer: sobrenome,
+                emailServer: email,
+                dtNascServer: data_formatada,
+                telefoneServer: telefone,
+                cepServer: cep,
+                numeroServer: numero,
+                complementoServer: complemento,
+                senhaServer: senha
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    mostrarPopup('Muito bom','Seu cadastro foi realizado com sucesso!','Ir para o Login', 'login.html')
+
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
+
+</script>

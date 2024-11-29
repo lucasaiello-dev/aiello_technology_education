@@ -1,0 +1,229 @@
+.progress-container { 
+    width: 50%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 1.2em;
+    transition: opacity 0.5s ease-in-out;
+}  
+
+.progress-bar { 
+    height: 100%; 
+    background-color: #4caf50; 
+    width: 0; 
+    border-radius: 25px 0 0 25px; 
+    text-align: center; 
+    line-height: 30px; 
+    color: white; 
+    transition: width 0.5s ease;
+}
+
+.sessao {
+    height: 100vh;
+    background-color: #00245C;
+}
+
+.sessao .container {
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em
+}
+
+.titulo {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 3.5em;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+    width: 70%;
+}
+
+#inicio_teste {
+    background-color: #FFFFFF;
+    font-size: 2em;
+    border-radius: 1em;
+    font-weight: 450;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.questao {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.3em;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.questao h3{
+    text-align: center;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.4em;
+    width: 90%;
+}
+
+.esconder {
+    display: none;
+}
+
+.passar {
+    display: flex;
+    transform: translateX(-80vw);
+}
+
+.enunciado {
+    color: #4FB1FF;
+    font-weight: 550;
+}
+
+.opcoes label {
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 100%;
+    padding: 0.85em;
+    border-radius: 0.40em;
+    font-weight: 450;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease, font-weight 0.4s ease;
+}
+
+.opcoes label input {
+    margin-right: 0.8em;
+}
+
+header {
+    margin: 0;
+
+}
+
+.btn-div {
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_form {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.acerto {
+    background-color: rgb(144, 255, 177) !important;
+    color: #222e23 !important;
+    font-weight: 550 !important;
+}
+
+.erro {
+    background-color: rgb(255, 144, 151) !important;
+    color: #2e2224 !important;
+    font-weight: 550 !important;
+}
+
+#fim {
+    gap: 0.5em;
+}
+
+.subtitulo {
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.fim-resultados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    gap: 1.3em
+}
+
+.resultado {
+    border: 0.3em #4FB1FF solid;
+    border-radius: 0.9em;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+.resultado p{
+    color: #FFFFFF;
+    font-size: 2em;
+    font-weight: 650;
+}
+
+.resultado #acertos {
+    color: rgb(144, 255, 177);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.resultado #erros {
+    color: rgb(255, 144, 151) ;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.menu-teste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3em;
+    width: 80%;
+}
+
+.menu-teste .btn {
+    width: 100%;
+    font-size: 1.1em;
+    padding: 0.75em;
+    border-radius: 1.2em;
+}
+
+#js span {
+    color: #000000;
+    padding: 0.18em;
+    border-radius: 0.2em;
+    background-color: #F7DF1E;
+    font-size: 0.8em;
+}
+
+#html span {
+    color: #ffffff;
+    padding: 0.18em;
+    border-radius: 0.2em;
+    background-color: #E44D26;
+    font-size: 0.8em;
+}
+
+#css span {
+    color: #ffffff;
+    padding: 0.18em;
+    border-radius: 0.2em;
+    background-color: #264DE4;
+    font-size: 0.8em;
+}

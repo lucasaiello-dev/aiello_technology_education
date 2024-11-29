@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js"></script>
+    <link rel="icon" href="assets/logo_ate.png">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span onclick="window.location.href='index.html'">ATE</span>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="sobre_mim.html">Sobre Mim</a>
+                <a href="index.html#fale_conosco">Contato</a>
+            </div>
+            <div onclick="window.location.href='login.html'" class="entrar-cadastrar">
+                <div class="text-entrar">
+                    <span>Entrar /</span>
+                    <span>Cadastrar</span>
+                </div>
+                <img src="assets/user.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="banner">
+            <div class="container">
+                <div class="descricao">
+                    <p>Bem vindo a ATE</p>
+                    <h2>Experimente a nossa IDE Online e comprove seus conhecimentos através de Testes</h2>
+                    <span>Meu compromisso é com o seu aprendizado e a sua evolução em Tecnologia e Desenvolvimento de
+                        Software!</span>
+                    <button id="btn_inicio" onclick="window.location.href = 'login.html'" class="btn">
+                        Quero ter acesso a essas ferramentas!
+                    </button>
+                </div>
+                <div class="logo">
+                    <h1>Aiello</h1>
+                    <h3>Technology Education</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="sessao tutoriais">
+            <div class="container">
+                <div class="info">
+                    <div>
+                        <h2 class="titulo">Testes Técnicos</h2>
+                        <h2 class="subtitulo">(com certificação)</h2>
+                    </div>
+                    <p class="text">Preparei alguns testes a respeito das principais linguagens voltadas para o Desenvolvimento Web com o objetivo de você se desafiar e comprovar os seus conhecimentos.
+                    </p>
+                    <div class="btn-tutoriais">
+                        <button class="navegar">
+                            <img src="assets/arrow-small-left.png" alt="">
+                        </button>
+                        <button class="navegar">
+                            <img src="assets/arrow-small-left.png" style="transform: scaleX(-1);" alt="">
+                        </button>
+                        <button onclick="window.location.href = 'tutoriais.html'" class="btn">
+                            Ver todos
+                        </button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div><img src="assets/html_logo.png" alt="">
+                    </div>
+                    <div><img src="assets/css_logo.png" alt=""></div>
+                    <div><img src="assets/js_logo.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sessao tutoriais">
+            <div class="container ide">
+                <div class="info ide">
+                    <div>
+                        <h2 class="titulo">IDE Online</h2>
+                    </div>
+                    <p class="text">Também existe uma ferramente onde você poderá testar as suas ideias sem precisar instalar nenhum outro software em seu dispositivo. Basta realizar o login neste mesmo site para acessar a nossa poderosa IDE Online. Desenvolva seus códigos em tempo real, diretamente do seu navegador.
+                    </p>
+                    <div class="btn-tutoriais ide">
+                        <button class="btn">
+                            Versão Demo
+                        </button>
+                        <button onclick="window.location.href = 'tutoriais.html'" class="btn">
+                            Versão completa
+                        </button>
+                    </div>
+                </div>
+                <div class="logo_coding">
+                </div>
+            </div>
+        </div>
+
+        <div class="sessao">
+            <div class="container sobre">
+                <div class="img">
+                    <button onclick="window.location.href = 'sobre_mim.html'" class="btn">Lucas Eduardo Aiello | SPTecher | 19 anos</button>
+                </div>
+                <div class="info">
+                    <h1 class="titulo">Conheça a minha História</h1>
+                    <p class="text">Separei uma seção para que você possa conhecer quem sou e a minha
+                        trajetória profissonal na área de Tecnologia e Desenvolvimento de Software até o momento, além das minhas realizações pessoais e próximos passos.</p>
+                    <button onclick="window.location.href = 'sobre_mim.html'" class="btn">Saber Mais</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="resultados_alcancados" class="sessao resultado">
+            <div class="container resultado">
+                <h1 class="titulo">Resultados Alcançados</h1>
+                <div class="resultados">
+                    <div class="conquista">
+                        <div class="borda">
+                            <img src="assets/student.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h1 id="usuarios_cadastrados" class="titulo">0</h1>
+                            <p class="text">Usuários Cadastrados</p>
+                        </div>
+                    </div>
+                    <div class="conquista">
+                        <div class="borda">
+                            <img src="assets/award.png" alt="">
+                        </div>
+                        <div class="info">
+                            <h1 id="tutoriais" class="titulo">0</h1>
+                            <p class="text">Tutoriais Realizados</p>
+                        </div>
+                    </div>
+                    <div class="conquista">
+                        <div class="borda">
+                            <img src="assets/test.png">
+                        </div>
+                        <div class="info">
+                            <h1 id="certificacoes" class="titulo">0</h1>
+                            <p class="text">Certificações Emitidas</p>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="subtitulo">Mudando vidas através da Educação em Tecnologia!</h2>
+            </div>
+        </div>
+
+        <div class="sessao feedbacks">
+            <div class="container feedbacks">
+                <div class="titulos">
+                    <h2 class="subtitulo">Depoimentos</h2>
+                    <h1 class="titulo">O que dizem sobre nós</h1>
+                </div>
+                <div class="feedbacks">
+                    <div class="depoimento">
+                        <p class="text">"Adorei a plataforma! Os testes são bem elaborados e abrangem muitos tópicos. A interface é intuitiva e a IDE online são incríveis para testar códigos em tempo real e, dessa forma, posso conferir o resultado de cada tentativa. O aprendizado é prático e eficiente. Excelente trabalho!"</p>
+                        <div class="perfil">
+                            <div class="img"></div>
+                            <div class="info-perfil">
+                                <p>Guilherme da Silva</p>
+                                <span>Entrou a 1 mês</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depoimento">
+                        <p class="text">"Combinar testes e uma IDE online é genial! Os desafios são motivadores e ajudam muito a praticar e reforçar o aprendizado. A plataforma é uma ótima ferramenta para aprimorar habilidades técnicas em Desenvolvimento WEB"</p>
+                        <div class="perfil">
+                            <div class="img"></div>
+                            <div class="info-perfil">
+                                <p>Daniel Castro</p>
+                                <span>Entrou a 2 meses</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="depoimento">
+                        <p class="text">"Plataforma excelente! A IDE facilita muito a prática e as avaliações detalhadas são extremamente úteis. Os testes são uma maneira prática de revisar HTML, CSS e JavaScript. Adorei a experiência e recomendo a todos!"</p>
+                        <div class="perfil">
+                            <div class="img"></div>
+                            <div class="info-perfil">
+                                <p>Luana dos Reis</p>
+                                <span>Entrou a 3 semanas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fale_conosco" class="sessao fale-conosco">
+            <div class="container fale-conosco">
+                <div class="descricao">
+                    <div class="titulos">
+                        <h2 class="subtitulo">Tem alguma pergunta?</h2>
+                        <h1 class="titulo">Fale Conosco!</h1>
+                    </div>
+                    <p>Caso tenha alguma dúvida ou deseja contribuir com alguma sugestão de melhoria, preencha os campos
+                        e envie a sua mensagem.</p>
+                    <div class="meios-contato">
+                        <div class="contato">
+                            <img src="assets/whatsapp.png" alt="">
+                            <h1 class="titulo">(16) 99763-4968</h1>
+                        </div>
+                        <div class="contato">
+                            <img src="assets/social.png" alt="">
+                            <h1 class="titulo">@aiellotech</h1>
+                        </div>
+                        <div class="contato">
+                            <img src="assets/communication.png" alt="">
+                            <h1 class="titulo">aiellotech@gmail.com</h1>
+                        </div>
+                    </div>
+                </div>
+                <form action="">
+                    <div class="campos">
+                        <input required type="text" placeholder="Nome" id="input_nome">
+                        <input required type="text" placeholder="Telefone" id="input_telefone">
+                        <input required type="email" placeholder="E-mail" id="input_email">
+                        <select required id="select_motivo">
+                            <option disabled selected>Motivo do Contato</option>
+                            <option value="Tirar dúvidas">Tirar dúvidas</option>
+                            <option value="Sugestões de Melhoria">Sugestões de Melhoria</option>
+                            <option value="Reclamações ou Críticas">Reclamações ou Críticas</option>
+                        </select>
+                        <textarea placeholder="Mensagem" required id="text_mensagem"></textarea>
+                        <button type="submit" class="btn">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <footer> 
+            <div class="container">
+                <div class="logo">
+                    <h1>Aiello</h1>
+                    <h3>Technology Education</h3>
+                </div>
+
+                <div class="nav">
+                    <h3>Navegue</h3>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="sobre_mim.html"><li>Sobre Mim</li></a>
+                    <a href="ide_online.html"><li>IDE Online</li></a>
+                    <a href="testes.html"><li>Testes</li></a>
+                    <a href="index.html#fale_conosco"><li>Contato</li></a>
+                </div>
+
+                <div class="nav" id="acompanhe">
+                    <h3>Nos Acompanhe</h3>
+                    <div>
+                        <img src="assets/facebook.png" alt="">
+                        <a href=""><li>Aiello Tech (ATE)</li></a>
+                    </div>
+                    <div>
+                        <img src="assets/instagram.png" alt="">
+                        <a href=""><li>@aiellotech</li></a>
+                    </div>
+                    <div>
+                        <img src="assets/linkedin-logo.png" alt="">
+                        <a href=""><li>aiellotech</li></a>
+                    </div>
+                </div>
+            </div>
+            <p>Desenvolvido por Lucas Eduardo Aiello | Estudante do 1° Semestre de Análise e Desenvolvimento de Sistemas
+            </p>
+        </footer>
+    </main>
+</body>
+
+</html>

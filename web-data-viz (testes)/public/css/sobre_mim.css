@@ -1,0 +1,233 @@
+main {
+    gap: 3.5em;
+}
+
+.banner.sobre {
+    height: 55vh;
+}
+
+.banner.sobre .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 60vh;
+    width: 100%;
+    margin-inline: 6em;
+}
+
+.banner.sobre .container .titulo {
+    color: #ffffff;
+    width: 70%;
+    font-size: 4.2em;
+}
+
+.info {
+    gap: 0.9em;
+}
+
+div.btn {
+    font-size: 1em;
+    border-radius: 2em;
+    padding: 0.4em 1.3em 0.4em 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+div.btn img {
+    width: 1em;
+}
+
+.info.efetivacao {
+    width: 48%;
+}
+
+.img {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00245C;
+    border-radius: 0 2.5em 10em 0;
+}
+
+.img .btn {
+    align-self: flex-start;
+    margin-top: 2em;
+    padding-inline: 3em;
+    border-radius: 1.1em;
+    font-size: 0.9em;
+}
+
+.container.inicio {
+    flex-direction: column;
+}
+
+.container.inicio .info {
+    width: 100%;
+    align-items: center;
+}
+
+.container.inicio .info p{
+    text-align: center;
+}
+
+.sessao.nascimento {
+    height: 70vh;
+}
+
+.sessao.nascimento .container .img-pessoal {
+    width: 32em;
+    margin-right: 2.7em;
+}
+
+#logo_zeek {
+    margin: 0.5em;
+    width: 40em;
+}
+
+.sessao.efetivacao {
+    height: 60vh;
+}
+
+.img-txt {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: -2.5em;
+    gap: 0.4em
+}
+
+.img-txt .img {
+    height: 80%;
+    width: 100%;
+    background-image: url('../assets/pessoal_04.jpeg');
+    background-position: top;
+    background-size: cover;
+}
+
+.img-txt p{
+    font-size: 0.7em;
+    color: #727272;
+    font-weight: 500;
+}
+
+.sessao.realizacao {
+    background-color: #4FB1FF;
+    height: 110vh;
+}
+
+.container.realizacao {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container.realizacao .titulo {
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    gap: 1em;
+}
+
+#certificacoes img {
+    width: 16em;
+}
+
+.card div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 65vh;
+    border: 0.35em #00245C solid;
+    border-radius: 1.5em;
+    color: white;
+}
+
+.card div img {
+    width: 12em;
+}
+
+.card div p {
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+}
+
+.card h3 {
+    font-size: 2em;
+}
+
+.container.passos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    height: 85vh;
+}
+
+.info.passos {
+    width: 100%;
+    gap: 1.5em;
+}
+
+.passo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.passo img {
+    width: 3em;
+}
+
+.passo h3 {
+    color: #727272;
+    font-size: 1.7em;
+}
+
+.container.passos .btn{
+    border-radius: 1.6em;
+    font-size: 1em;
+}
+
+footer {
+    background-color: #00245C;
+}
+
+.logo-reduzido {
+    color: #ffffff;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+.parte-reduzido .titulo {
+    color: #ffffff;
+}
+
+.parte-reduzido div.text-reduzido {
+    color: #acacac;
+}
+
+.parte-reduzido div.imgs-logo img {
+    filter: grayscale(100%) brightness(1.5);
+}
