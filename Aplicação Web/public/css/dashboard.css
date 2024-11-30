@@ -104,8 +104,22 @@ main {
     font-size: 1.9em;
 }
 
-#kpi_assuntos.kpis-geral .kpi p{
+#kpi_assuntos.kpis-geral .kpi div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 35%;
+}
+
+#kpi_assuntos.kpis-geral .kpi div p{
     font-size: 1.45em;
+}
+
+.media-assunto {
+    font-size: 1em !important;
+    margin-top: 3.5%;
 }
 
 .kpi p{

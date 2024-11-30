@@ -60,6 +60,19 @@ function coletarMediaNotasModel(idUsuario) {
     return database.executar(instrucaoSql)
 }
 
+function coletarMediaPorAssuntoModel(idUsuario) {
+    console.log('ACESSEI O USUÁRIO MODEL')
+    var instrucaoSql = `
+    SELECT assunto, TRUNCATE(avg(notaFinal),1) AS media
+	FROM tentativa
+	JOIN teste
+    ON teste.idTeste = tentativa.fkTeste
+    WHERE fkUsuario = ${idUsuario}
+    GROUP BY assunto;
+    `
+    return database.executar(instrucaoSql)
+}
+
 module.exports = {
     autenticar,
     cadastrar,
@@ -67,5 +80,6 @@ module.exports = {
     enviarDadosTentativaAtual,
     coletarNotasMaximasModel,
     coletarUltimaNotaModel,
-    coletarMediaNotasModel
+    coletarMediaNotasModel,
+    coletarMediaPorAssuntoModel
 }

@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="../css/testes_tecnicos.css">
     <link rel="icon" href="../assets/logo_ate.png">
     <script src="../js/testes_tecnicos.js"></script>
-    <title>HTML | Nível 02</title>
+    <title>JavaScript | Nível 02</title>
 </head>
 
 <body>
-
     <button id="btn_sair" onclick="voltarMenu()" class="btn">Cancelar Tentativa</button>
 
     <div class="sessao">
         <div class="container">
-            <h1 id="html" class="titulo"> <span>HTML</span> | Nível 02</h1>
+            <h1 id="js" class="titulo"> <span>JavaScript</span> | Nível 02</h1>
             <div class="progress-container" id="progress-container">
                 <div class="progress-bar" id="progress-bar"></div>
             </div>
@@ -27,222 +26,222 @@
                 </div>
 
                 <div id="1" class="questao esconder">
-                    <h3 class="enunciado">Qual é a principal utilização da tag &lt;div&gt; no HTML?</h3>
+                    <h3 class="enunciado">Qual é a finalidade da palavra-chave return em uma função JavaScript?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_1')">
                             <input id="opcao1_1" type="radio" name="option" value=0>
-                            Para criar links para outras páginas da web
+                            Iniciar um loop
                         </label>
                         <label onclick="marcarRadio('opcao2_1')">
                             <input id="opcao2_1" type="radio" name="option" value=0>
-                            Para definir o estilo de texto, como negrito ou itálico
+                            Declarar uma variável global
                         </label>
                         <label onclick="marcarRadio('opcao3_1')">
-                            <input id="opcao3_1" type="radio" name="option" value=0>
-                            Para inserir imagens na página
+                            <input id="opcao3_1" type="radio" name="option" value=1>
+                            Interromper a execução da função e retornar um valor
                         </label>
                         <label onclick="marcarRadio('opcao4_1')">
-                            <input id="opcao4_1" type="radio" name="option" value=1>
-                            Para criar seções independentes e blocos de conteúdo na página
+                            <input id="opcao4_1" type="radio" name="option" value=0>
+                            Definir um parâmetro da função
                         </label>
                     </div>
                 </div>
 
                 <div id="2" class="questao esconder">
-                    <h3 class="enunciado">Marque a alternativa onde a tag &lt;a&gt; está sendo utilizada corretamente.
+                    <h3 class="enunciado">O que acontece quando uma função em JavaScript não inclui uma instrução return?
                     </h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_2')">
                             <input id="opcao1_2" type="radio" name="option" value=0>
-                            &lt;a&gt;Clique aqui para visitar o Example&lt;/a&gt;
+                            A função retorna null
                         </label>
                         <label onclick="marcarRadio('opcao2_2')">
                             <input id="opcao2_2" type="radio" name="option" value=1>
-                            &lt;a href="https://www.example.com"&gt;Clique aqui para visitar o Example&lt;/a&gt;
+                            A função retorna undefined
                         </label>
                         <label onclick="marcarRadio('opcao3_2')">
                             <input id="opcao3_2" type="radio" name="option" value=0>
-                            &lt;a link="https://www.example.com"&gt;Clique aqui para visitar o Example&lt;/a&gt;
+                            A função não retorna nada e causa um erro
                         </label>
                         <label onclick="marcarRadio('opcao4_2')">
                             <input id="opcao4_2" type="radio" name="option" value=0>
-                            &lt;a url="https://www.example.com"&gt;Clique aqui para visitar o Example&lt;/a&gt;
+                            A função retorna 0
                         </label>
                     </div>
                 </div>
 
                 <div id="3" class="questao esconder">
-                    <h3 class="enunciado">Qual é a tag utilizada para a inserção de imagens no HTML?</h3>
+                    <h3 class="enunciado">Como você declara um vetor (array) em JavaScript com três elementos: "maçã", "banana" e "laranja"?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_3')">
-                            <input id="opcao1_3" type="radio" name="option" value=0>
-                            &lt;picture&gt;
+                            <input id="opcao1_3" type="radio" name="option" value=1>
+                            let frutas = ["maçã", "banana", "laranja"];
                         </label>
                         <label onclick="marcarRadio('opcao2_3')">
-                            <input id="opcao2_3" type="radio" name="option" value=1>
-                            &lt;img&gt;
+                            <input id="opcao2_3" type="radio" name="option" value=0>
+                            let frutas = "maçã", "banana", "laranja";
                         </label>
                         <label onclick="marcarRadio('opcao3_3')">
                             <input id="opcao3_3" type="radio" name="option" value=0>
-                            &lt;figure&gt;
+                            let frutas = {"maçã", "banana", "laranja"};
                         </label>
                         <label onclick="marcarRadio('opcao4_3')">
                             <input id="opcao4_3" type="radio" name="option" value=0>
-                            &lt;src&gt;
+                            let frutas = (maçã, banana, laranja);
                         </label>
                     </div>
                 </div>
 
                 <div id="4" class="questao esconder">
-                    <h3 class="enunciado">Qual atributo da tag &lt;input&gt; é usado para especificar o tipo de dado que o usuário deve inserir?</h3>
+                    <h3 class="enunciado">Como você acessa o segundo elemento de um vetor chamado listaCompra em JavaScript?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_4')">
                             <input id="opcao1_4" type="radio" name="option" value=1>
-                            type
+                            listaCompra[1]
                         </label>
                         <label onclick="marcarRadio('opcao2_4')">
                             <input id="opcao2_4" type="radio" name="option" value=0>
-                            input
+                            listaCompra[0]
                         </label>
                         <label onclick="marcarRadio('opcao3_4')">
                             <input id="opcao3_4" type="radio" name="option" value=0>
-                            name
+                            listaCompra(1)
                         </label>
                         <label onclick="marcarRadio('opcao4_4')">
                             <input id="opcao4_4" type="radio" name="option" value=0>
-                            value
+                            listaCompra(2)
                         </label>
                     </div>
                 </div>
 
                 <div id="5" class="questao esconder">
-                    <h3 class="enunciado">Qual valor do atributo type da tag &lt;input&gt; é usado para criar um campo de senha?</h3>
+                    <h3 class="enunciado">O que são parâmetros em uma função JavaScript?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_5')">
                             <input id="opcao1_5" type="radio" name="option" value=0>
-                            text
+                            Variáveis locais dentro da função
                         </label>
                         <label onclick="marcarRadio('opcao2_5')">
                             <input id="opcao2_5" type="radio" name="option" value=1>
-                            password
+                            Valores passados para a função quando ela é chamada
                         </label>
                         <label onclick="marcarRadio('opcao3_5')">
                             <input id="opcao3_5" type="radio" name="option" value=0>
-                            number
+                            A palavra-chave usada para retornar valores da função
                         </label>
                         <label onclick="marcarRadio('opcao4_5')">
                             <input id="opcao4_5" type="radio" name="option" value=0>
-                            email
+                            A função que declara variáveis globais
                         </label>
                     </div>
                 </div>
 
                 <div id="6" class="questao esconder">
-                    <h3 class="enunciado">Qual é a função da tag &lt;select&gt; no HTML?</h3>
+                    <h3 class="enunciado">Como você retorna o último elemento de um vetor chamado numeros em uma função JavaScript?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_6')">
                             <input id="opcao1_6" type="radio" name="option" value=0>
-                            Criar uma tabela de dados
+                            return numeros[last];
                         </label>
                         <label onclick="marcarRadio('opcao2_6')">
                             <input id="opcao2_6" type="radio" name="option" value=0>
-                            Criar um botão de envio de formulário
+                            return numeros[-1];
                         </label>
                         <label onclick="marcarRadio('opcao3_6')">
-                            <input id="opcao3_6" type="radio" name="option" value=1>
-                            Criar um menu suspenso para selecionar uma opção
+                            <input id="opcao3_6" type="radio" name="option" value=0>
+                            return numeros[length - 1];
                         </label>
                         <label onclick="marcarRadio('opcao4_6')">
-                            <input id="opcao4_6" type="radio" name="option" value=0>
-                            Criar um campo de entrada para texto
+                            <input id="opcao4_6" type="radio" name="option" value=1>
+                            return numeros[numeros.length - 1];
                         </label>
                     </div>
                 </div>
 
                 <div id="7" class="questao esconder">
-                    <h3 class="enunciado">Marque a alternativa onde a sintaxe para os atributos id e class está correta.</h3>
+                    <h3 class="enunciado">Como você adiciona um elemento "uva" ao final de um vetor chamado frutas?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_7')">
                             <input id="opcao1_7" type="radio" name="option" value=1>
-                            &lt;div id="menu" class="navegacao"&gt;Menu&lt;/div&gt;
+                            frutas.push("uva");
                         </label>
                         <label onclick="marcarRadio('opcao2_7')">
                             <input id="opcao2_7" type="radio" name="option" value=0>
-                            &lt;div id-"menu" class="navegacao"&gt;Menu&lt;/div&gt;
+                            frutas.add("uva");
                         </label>
                         <label onclick="marcarRadio('opcao3_7')">
                             <input id="opcao3_7" type="radio" name="option" value=0>
-                            &lt;div id=menu class="navegacao"&gt;Menu&lt;/div&gt;
+                            frutas.insert("uva");
                         </label>
                         <label onclick="marcarRadio('opcao4_7')">
                             <input id="opcao4_7" type="radio" name="option" value=0>
-                            &lt;div id=menu class:"navegacao"&gt;Menu&lt;/div&gt;
+                            frutas.append("uva");
                         </label>
                     </div>
                 </div>
 
                 <div id="8" class="questao esconder">
-                    <h3 class="enunciado">Qual é a função da tag &lt;br&gt; no HTML?</h3>
+                    <h3 class="enunciado">Como você usa um loop for para imprimir os números de 10 a 1 no console?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_8')">
                             <input id="opcao1_8" type="radio" name="option" value=0>
-                            Aplicar negrito ao texto
+                            for (let i = 10; i <= 1; i--) { console.log(i); }
                         </label>
                         <label onclick="marcarRadio('opcao2_8')">
                             <input id="opcao2_8" type="radio" name="option" value=0>
-                            Indicar que idioma da página é Português (Brasil)
+                            for (let i = 1; i <= 10; i--) { console.log(i); }
                         </label>
                         <label onclick="marcarRadio('opcao3_8')">
                             <input id="opcao3_8" type="radio" name="option" value=0>
-                            Definir um parágrafo
+                            for (let i = 10; i >= 1; i++) { console.log(i); }
                         </label>
                         <label onclick="marcarRadio('opcao4_8')">
                             <input id="opcao4_8" type="radio" name="option" value=1>
-                            Inserir uma quebra de linha no texto
+                            for (let i = 10; i >= 1; i--) { console.log(i); }
                         </label>
                     </div>
                 </div>
 
                 <div id="9" class="questao esconder">
-                    <h3 class="enunciado">Qual tag HTML é usada para definir uma seção de rodapé em um documento?</h3>
+                    <h3 class="enunciado">Como você usa um loop for para percorrer todos os elementos de um vetor chamado numeros e imprimir cada elemento no console?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_9')">
                             <input id="opcao1_9" type="radio" name="option" value=0>
-                            &lt;article&gt;
+                            for (let i = 0; i <= numeros.length; i++) { console.log(numeros[i]); }
                         </label>
                         <label onclick="marcarRadio('opcao2_9')">
                             <input id="opcao2_9" type="radio" name="option" value=1>
-                            &lt;footer&gt;
+                            for (let i = 0; i < numeros.length; i++) { console.log(numeros[i]); }
                         </label>
                         <label onclick="marcarRadio('opcao3_9')">
                             <input id="opcao3_9" type="radio" name="option" value=0>
-                            &lt;section&gt;
+                            for (let i = 1; i < numeros.length; i++) { console.log(numeros[i]); }
                         </label>
                         <label onclick="marcarRadio('opcao4_9')">
                             <input id="opcao4_9" type="radio" name="option" value=0>
-                            &lt;bottom&gt;
+                            for (let i = 0; i < numeros; i++) { console.log(numeros[i]); }
                         </label>
                     </div>
                 </div>
 
                 <div id="10" class="questao esconder">
-                    <h3 class="enunciado">Qual atributo é usado na tag &lt;img&gt; para fornecer um texto alternativo para a imagem?</h3>
+                    <h3 class="enunciado">Como você define uma função que aceita dois parâmetros, base e altura, e retorna a área de um retângulo?</h3>
                     <div class="opcoes">
                         <label onclick="marcarRadio('opcao1_10')">
                             <input id="opcao1_10" type="radio" name="option" value=0>
-                            href
+                            areaRetangulo(base, altura) { return base * altura; }
                         </label>
                         <label onclick="marcarRadio('opcao2_10')">
                             <input id="opcao2_10" type="radio" name="option" value=0>
-                            src
+                            function areaRetangulo(base, altura) = { return base * altura; }
                         </label>
                         <label onclick="marcarRadio('opcao3_10')">
                             <input id="opcao3_10" type="radio" name="option" value=1>
-                            alt
+                            function areaRetangulo(base, altura) { return base * altura; }
                         </label>
                         <label onclick="marcarRadio('opcao4_10')">
                             <input id="opcao4_10" type="radio" name="option" value=0>
-                            title
+                            function areaRetangulo(base altura) { return base * altura; }
                         </label>
                     </div>
                 </div>
@@ -262,7 +261,7 @@
                         </div>
                     </div>
                     <div class="menu-teste">
-                        <button onclick="window.location.href='../testes.html'" class="btn">Voltar aos testes</button>
+                        <button onclick="window.location.href='../dashboard.html'" class="btn">Voltar aos testes</button>
                         <button onclick="location.reload()" class="btn">Tentar novamente</button>
                     </div>
                 </div>

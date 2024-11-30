@@ -76,6 +76,9 @@ function passarPergunta() {
     if (ultima_pergunta) {
         finalizarTeste()
         enviarDados()
+        botao = document.getElementById('btn_sair')
+        botao.style.opacity = 0
+        setTimeout(() => {botao.style = 'display: none'}, 500)
     }
 
 }

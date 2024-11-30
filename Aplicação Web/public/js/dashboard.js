@@ -1,13 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const canvas_grafico = document.getElementById('projecao_notas')
 
+var graficoLinha
+
+function plotarGrafico() {
+
+    const canvas_grafico = document.getElementById('projecao_notas').getContext('2d')
     const labels = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     const data = {
         labels: labels,
         datasets: [{
             label: 'Progressão das últimas 10 notas',
-            data: [10, 8, 7, 5, 9, 7, 10, 6, 8, 10],
+            data: [],
             fill: true,
             borderColor: '#4FB1FF',
             pointBackgroundColor: '#4FB1FF',
@@ -38,15 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
                         display: true,
                         text: 'Notas'
                     },
-                    beginAtZero: true
+                    beginAtZero: true,
+                    min: 0, 
+                    max: 10
                 }
             }
         }
     }
 
-    new Chart(canvas_grafico, config)
+    graficoLinha = new Chart(canvas_grafico, config)
 
-})
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     telaAtual = document.getElementById('dashboard')
@@ -98,7 +103,6 @@ function trazerNotasMaximas() {
                     console.warn("Nenhum resultado encontrado no array 'resultado'.");
                 }
 
-                testeJson = json.resultado
                 mostrarNotasMaximas(json.resultado)
             })
 
@@ -117,8 +121,6 @@ function trazerNotasMaximas() {
     })
 
 }
-
-var testeJson = ''
 
 function mostrarNotasMaximas(NotasMaximas = []) {
     for (var i = 0; i < NotasMaximas.length; i++) {
@@ -146,6 +148,9 @@ function recolherDadosUsuario() {
     if (telaAtual == document.getElementById('dashboard')) {
         recolherUltimaNota()
         recolherMediaNotas()
+        plotarGrafico()
+        trazerDadosUltimasTentativas()
+        trazerMediaPorAssunto()
     }
 
 }
@@ -226,5 +231,124 @@ function recolherMediaNotas() {
         console.log(erro);
     })
 
+}
+
+function trazerDadosUltimasTentativas() {
+    fetch(`/usuario/receberUltimasTentativas/${sessionStorage.getItem('ID_USUARIO')}`, {
+        cache: 'no-store'
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO trazerNotasUltimasTentativas()!")
+
+        if (resposta.ok) {
+            resposta.json().then(json => {
+                console.log("Dados recebidos:", JSON.stringify(json));
+
+                // Recupera a melhor posição corretamente
+                if (json.resultado) {
+                    console.log(json.resultado)
+
+                    if (json.resultado[0].notaFinal === null) {
+                        return
+                    }
+
+                    atualizarGrafico(json.resultado)
+                    
+
+                } else {
+                    console.warn("Nenhum resultado encontrado no array 'resultado'.");
+                }
+
+            })
+
+        } else {
+
+            console.log("Houve um erro ao trazer os dados!");
+
+            resposta.text().then(texto => {
+                mostrarPopup('Ops! ☹️', texto, 'Ok')
+                return
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+}
+
+function trazerMediaPorAssunto() {
+    fetch(`/usuario/coletarMediaPorAssunto/${sessionStorage.getItem('ID_USUARIO')}`, {
+        cache: 'no-store'
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO trazerNotasUltimasTentativas()!")
+
+        if (resposta.ok) {
+            resposta.json().then(json => {
+                console.log("Dados recebidos:", JSON.stringify(json));
+
+                // Recupera a melhor posição corretamente
+                if (json.resultado) {
+                    console.log(json.resultado)
+
+                    if (json.resultado[0].media === null) {
+                        return
+                    }
+
+                    alterarSitucaoMediaAssuntos(json.resultado)
+                                        
+
+                } else {
+                    console.warn("Nenhum resultado encontrado no array 'resultado'.");
+                }
+
+            })
+
+        } else {
+
+            console.log("Houve um erro ao trazer os dados!");
+
+            resposta.text().then(texto => {
+                mostrarPopup('Ops! ☹️', texto, 'Ok')
+                return
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+}
+
+
+function atualizarGrafico(dataJson) {
+    const data = []
+
+    for (var i = 0; i < dataJson.length; i++) {
+        data.push(dataJson[i].notaFinal)
+    }
+
+
+    graficoLinha.data.datasets[0].data = data;
+    
+    graficoLinha.update();
+}
+
+function alterarSitucaoMediaAssuntos(vetorMediasAssuntos = []) {
+    for (var i = 0; i < vetorMediasAssuntos.length; i++) {
+        const elemento_assunto = document.getElementById('nivel_' + `${vetorMediasAssuntos[i].assunto}`)
+        const elemento_media = document.getElementById('media_' + `${vetorMediasAssuntos[i].assunto}`)
+
+        console.log(elemento_assunto, elemento_media)
+
+        const media = vetorMediasAssuntos[i].media
+        var situacao = 'Baixo'
+
+        if (media > 6) {
+            situacao = 'Médio'
+        } else if (media > 8) {
+            situacao = 'Alto'
+        }
+
+        elemento_assunto.innerHTML = situacao
+        elemento_media.innerHTML = media
+    }
 }
 

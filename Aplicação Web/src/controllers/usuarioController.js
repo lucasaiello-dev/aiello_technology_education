@@ -66,12 +66,15 @@ function cadastrar(req, res) {
 }
 
 function receberUltimasTentativas(req, res) {
-    var idUsuario = req.query.fkUsuario
+    var idUsuario = req.params.fkUsuario
+    console.log(idUsuario)
 
     usuarioModel.ultimasTentativasModel(idUsuario).then (
         function(resultado) {
             console.log('Retornei do Model com as 10 últimas tentativas')
-            res.json(resultado)
+            res.json({
+                resultado: resultado
+            });
         }
     ).catch(
         function (erro) {
@@ -158,6 +161,25 @@ function coletarMediaNotas(req, res) {
     )
 }
 
+function coletarMediaPorAssunto(req, res) {
+    var idUsuario = req.params.fkUsuario
+
+    usuarioModel.coletarMediaPorAssuntoModel(idUsuario).then (
+        function(resultado) {
+            console.log('Retornei do Model com as 10 últimas tentativas')
+            res.json({
+                resultado: resultado
+            });
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("\nHouve um erro ao retornar as 10 últimas tentativas. Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    )
+}
+
 
 
 module.exports = {
@@ -167,5 +189,6 @@ module.exports = {
     enviarDadosTentativaAtual,
     coletarNotasMaximas,
     coletarUltimaNota,
-    coletarMediaNotas
+    coletarMediaNotas,
+    coletarMediaPorAssunto
 }

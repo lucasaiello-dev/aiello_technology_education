@@ -46,9 +46,7 @@ CREATE TABLE tentativa (
 		REFERENCES usuario(idUsuario)	
 );
 
-SELECT * FROM usuario;
-SELECT * FROM teste;
-SELECT * FROM tentativa;
+
 
 
 

@@ -17,13 +17,18 @@ CREATE TABLE usuario (
 
 CREATE TABLE teste (
 	idTeste INT PRIMARY KEY AUTO_INCREMENT,
-    nome varchar(20),
-    descricao varchar(45),
-    nivel INT,
-    assunto varchar(20),
-    CONSTRAINT chk_nivel
-		CHECK (nivel IN(1,2))
+    nome varchar(45),
+    assunto varchar(45),
+    descricao varchar(100)
 );
+
+INSERT INTO teste VALUES
+(default, 'HTML | Nível 01', 'HTML', 'Principais tags que compõem a estrutura do arquivo algumas tags de texto'),
+(default, 'HTML | Nível 02', 'HTML', 'Tags de img, input, a, div, link e a respeito de id e classes'),
+(default, 'CSS | Nível 01', 'CSS', 'Seletores CSS e atributos para alteração de cores, espaçamento, tamanho e fonte dos elementos'),
+(default, 'CSS | Nível 02', 'CSS', 'Display flexível, alinhamento, e ordem dos elementos'),
+(default, 'JavaScript | Nível 01', 'JS', 'variáveis e constantes, if e else, operadores lógicos e declaração de funções'),
+(default, 'JavaScript | Nível 02', 'JS', 'Atributos de uma função, return, vetores, length e loop');
 
 CREATE TABLE tentativa (
 	idTentativa INT AUTO_INCREMENT,
@@ -41,19 +46,7 @@ CREATE TABLE tentativa (
 		REFERENCES usuario(idUsuario)	
 );
 
-CREATE TABLE pergunta (
-	idPergunta INT,
-    fkTeste INT,
-    enunciado varchar(45),
-    CONSTRAINT pkCompostaPergunta
-		PRIMARY KEY (idPergunta,fkTeste),
-	CONSTRAINT fkTestePergunta
-		FOREIGN KEY (fkTeste)
-		REFERENCES teste(idTeste),
-	CONSTRAINT chk_idPerguntaTeste
-		CHECK (idPergunta <= 10)
-);
 
-SELECT * FROM usuario;
+
 
 

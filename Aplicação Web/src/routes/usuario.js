@@ -31,4 +31,8 @@ router.get('/coletarMediaNotas/:fkUsuario', (req, res) =>{
     usuarioController.coletarMediaNotas(req, res)
 })
 
+router.get('/coletarMediaPorAssunto/:fkUsuario', (req, res) => {
+    usuarioController.coletarMediaPorAssunto(req, res)
+})
+
 module.exports = router
