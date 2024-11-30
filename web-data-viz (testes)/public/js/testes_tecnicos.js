@@ -159,7 +159,6 @@ function rolarParaBaixo() {
 
 const fkTeste = sessionStorage.getItem('FK_TESTE')
 const fkUsuario = sessionStorage.getItem('ID_USUARIO')
-const nota = qtd_acertos
 
     function enviarDados() {
         fetch("/usuario/enviarDadosTentativa", {
@@ -170,7 +169,7 @@ const nota = qtd_acertos
             body: JSON.stringify({
                 fkTesteServer: fkTeste,
                 fkUsuarioServer: fkUsuario,
-                notaFinalServer: nota
+                notaFinalServer: qtd_acertos
             }),
         })
 
@@ -184,6 +183,10 @@ const nota = qtd_acertos
                 console.log(`#ERRO: ${resposta}`);
             });
     }
+
+function voltarMenu() {
+    window.location.href = '../dashboard.html'
+}
 
 
 

@@ -1,4 +1,4 @@
-const { enviarDadosTentativa } = require("../controllers/usuarioController");
+
 var database = require("../database/config")
 
 function autenticar(email, senha) {
@@ -20,9 +20,9 @@ function cadastrar(nome, sobrenome, email, dtNasc, telefone, cep, numero, comple
     return database.executar(instrucaoSql);
 }
 
-function ultimasTentativas(idUsuario) {
+function ultimasTentativasModel(idUsuario) {
     console.log('ACESSEI O USUARIO MODEL');
-    var instrucaoSql = `SELECT idTentativa, notaFinal FROM tentativa WHERE fkUsuario = ${idUsuario};`;
+    var instrucaoSql = `SELECT notaFinal FROM tentativa WHERE fkUsuario = ${idUsuario} LIMIT 10`;
 
     return database.executar(instrucaoSql)
 }
@@ -36,9 +36,36 @@ function enviarDadosTentativaAtual(fkUsuario, fkTeste, notaFinal) {
     return database.executar(instrucaoSql)
 }
 
+function coletarNotasMaximasModel(idUsuario) {
+    console.log('ACESSEI O USUÁRIO MODEL')
+    var instrucaoSql = `
+    SELECT max(notaFinal) AS notaMaxima, fkTeste FROM tentativa WHERE fkUsuario = ${idUsuario} GROUP BY fkTeste
+    `
+    return database.executar(instrucaoSql)
+}
+
+function coletarUltimaNotaModel(idUsuario) {
+    console.log('ACESSEI O USUÁRIO MODEL')
+    var instrucaoSql = `
+    SELECT notaFinal FROM tentativa WHERE fkUsuario = ${idUsuario} ORDER BY dtTermino DESC LIMIT 1;
+    `
+    return database.executar(instrucaoSql)
+}
+
+function coletarMediaNotasModel(idUsuario) {
+    console.log('ACESSEI O USUÁRIO MODEL')
+    var instrucaoSql = `
+    SELECT truncate(avg(notaFinal),1) AS MediaNotas FROM tentativa WHERE fkUsuario = ${idUsuario};
+    `
+    return database.executar(instrucaoSql)
+}
+
 module.exports = {
     autenticar,
     cadastrar,
-    ultimasTentativas,
-    enviarDadosTentativaAtual
+    ultimasTentativasModel,
+    enviarDadosTentativaAtual,
+    coletarNotasMaximasModel,
+    coletarUltimaNotaModel,
+    coletarMediaNotasModel
 }

@@ -18,16 +18,17 @@ CREATE TABLE usuario (
 CREATE TABLE teste (
 	idTeste INT PRIMARY KEY AUTO_INCREMENT,
     nome varchar(45),
+    assunto varchar(45),
     descricao varchar(100)
 );
 
 INSERT INTO teste VALUES
-(default, 'HTML | Nível 01', 'Principais tags que compõem a estrutura do arquivo algumas tags de texto'),
-(default, 'HTML | Nível 02', 'Tags de img, input, a, div, link e a respeito de id e classes'),
-(default, 'CSS | Nível 01', 'Seletores CSS e atributos para alteração de cores, espaçamento, tamanho e fonte dos elementos'),
-(default, 'CSS | Nível 02', 'Display flexível, alinhamento, e ordem dos elementos'),
-(default, 'JavaScript | Nível 01', 'variáveis e constantes, if e else, operadores lógicos e declaração de funções'),
-(default, 'JavaScript | Nível 02', 'Atributos de uma função, return, vetores, length e loop');
+(default, 'HTML | Nível 01', 'HTML', 'Principais tags que compõem a estrutura do arquivo algumas tags de texto'),
+(default, 'HTML | Nível 02', 'HTML', 'Tags de img, input, a, div, link e a respeito de id e classes'),
+(default, 'CSS | Nível 01', 'CSS', 'Seletores CSS e atributos para alteração de cores, espaçamento, tamanho e fonte dos elementos'),
+(default, 'CSS | Nível 02', 'CSS', 'Display flexível, alinhamento, e ordem dos elementos'),
+(default, 'JavaScript | Nível 01', 'JS', 'variáveis e constantes, if e else, operadores lógicos e declaração de funções'),
+(default, 'JavaScript | Nível 02', 'JS', 'Atributos de uma função, return, vetores, length e loop');
 
 CREATE TABLE tentativa (
 	idTentativa INT AUTO_INCREMENT,
@@ -48,7 +49,6 @@ CREATE TABLE tentativa (
 SELECT * FROM usuario;
 SELECT * FROM teste;
 SELECT * FROM tentativa;
-
 
 
 

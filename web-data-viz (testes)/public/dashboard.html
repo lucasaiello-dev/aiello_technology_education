@@ -18,12 +18,12 @@
             <div class="img-logo">
                 <h1>ATE</h1>
             </div>
-            <p>Seja bem-vindo(a),<br><b id="usuario">Lucas Aiello</b></p>
+            <p>Seja bem-vindo(a),<br><b id="usuario"></b></p>
             <div class="opcoes">
                 <div class="opcao" onclick="trocarTela('dashboard')">
                     <p>Dashboard</p>
                 </div>
-                <div class="opcao" onclick="trocarTela('testes')">
+                <div class="opcao" onclick="trocarTela('testes'), trazerNotasMaximas()">
                     <p>Testes</p>
                 </div>
                 <div class="opcao" onclick="trocarTela('ide_online')">
@@ -37,36 +37,40 @@
         </div>
 
         <div id="dashboard" class="container dashboard">
-            <div class="sessao">
-                <h1 id="titulo_assuntos">Situação Geral</h1>
+            <div class="sessao assuntos">
+                <h1 id="titulo_assuntos">Níveis de Conhecimento</h1>
                 <div id="kpi_assuntos" class="kpis-geral">
                     <div id="html" class="kpi">
                         <h2>HTML</h2>
-                        <p>Ruim</p>
+                        <p>Alto</p>
                     </div>
                     <div id="css" class="kpi">
                         <h2>CSS</h2>
-                        <p>Bom</p>
+                        <p>Baixo</p>
                     </div>
                     <div id="js" class="kpi">
                         <h2>JS</h2>
-                        <p>Muito bom</p>
+                        <p>Médio</p>
                     </div>
                 </div>
             </div>
-            <div id="div_canvas">
-                <h1>Progessão das Últimas 10 notas</h1>
-                <canvas width="490" height="360" id="projecao_notas"></canvas>
-            </div>
-            <div class="sessao">
-                <div id="kpi_notas" class="kpis-geral">
-                    <div class="kpi">
-                        <h1>Última Nota</h1>
-                        <p>9</p>
+
+            <div class="sessao graficos">
+                <div class="div_grafico">
+                    <h1>Projeção das Últimas 10 Notas</h1>
+                    <div id="div_canvas">
+                        <canvas id="projecao_notas"></canvas>
                     </div>
-                    <div class="kpi">
-                        <h1>Média Atual</h1>
-                        <p>8,6</p>
+                </div>
+                    <div id="kpi_notas" class="kpis-geral">
+                        <div class="kpi">
+                            <h1>Última Nota</h1>
+                            <p id="ultima_nota">-</p>
+                        </div>
+                        <div class="kpi">
+                            <h1>Média Atual</h1>
+                            <p id="media_notas">-</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,33 +82,34 @@
                 <div class="assunto html">
                     <div onclick="irParaTeste(1,'testes/html_01.html')" class="bloco">
                         <h1>HTML | Nível 01</h1>
-                        <p>Melhor Nota: <b>9</b></p>
+                        <p>Melhor Nota: <b id="teste_1">-</b></p>
                     </div>
                     <div onclick="irParaTeste(2,'testes/html_02.html')" class="bloco">
                         <h1>HTML | Nível 02</h1>
-                        <p>Melhor Nota: <b>9</b></p>
+                        <p>Melhor Nota: <b id="teste_2">-</b></p>
                     </div>
                 </div>
-    
+
                 <div class="assunto css">
                     <div onclick="irParaTeste(3,'testes/css_01.html')" class="bloco">
                         <h1>CSS | Nível 01</h1>
-                        <p>Melhor Nota: <b>9</b></p>
+                        <p>Melhor Nota: <b id="teste_3">-</b></p>
                     </div>
                     <div onclick="irParaTeste(4,'testes/css_02.html')" class="bloco">
                         <h1>CSS | Nível 02</h1>
-                        <p>Melhor Nota: <b>9</b></p>
+                        <p>Melhor Nota: <b id="teste_4">-</b></p>
                     </div>
                 </div>
-    
-                <div onclick="irParaTeste(5,'testes/js_01.html')" class="assunto js">
-                    <div class="bloco">
+
+                <div class="assunto js">
+                    <div onclick="irParaTeste(5,'testes/js_01.html')" class="bloco">
                         <h1>JS | Nível 01</h1>
-                        <p>Melhor Nota: <b>9</b></p>
+                        <p>Melhor Nota: <b id="teste_5">-</b></p>
                     </div>
+
                     <div onclick="irParaTeste(6,'testes/js_02.html')" class="bloco">
                         <h1>JS | Nível 02</h1>
-                        <p>Melhor Nota: <b>9</b></p>
+                        <p>Melhor Nota: <b id="teste_6">-</b></p>
                     </div>
                 </div>
             </div>
@@ -125,21 +130,9 @@
             <p id="mensagem">Conteúdo do pop-up vai aqui.</p>
             <button id="btn_popup" class="btn" onclick="fecharPopup()">Vou arrumar :)</button>
         </div>
-    
+
         <div id="fundoEscuro"></div>
     </main>
 </body>
 
 </html>
-
-<script>
-
-    function recolherDadosUsuario() {
-        const nome = sessionStorage.getItem('NOME_USUARIO')
-        console.log(nome)
-
-        const elemento_nome = document.getElementById('usuario' + '!')
-        elemento_nome.innerHTML = nome
-    }
-
-</script>

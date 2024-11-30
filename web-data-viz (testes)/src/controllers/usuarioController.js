@@ -66,9 +66,9 @@ function cadastrar(req, res) {
 }
 
 function receberUltimasTentativas(req, res) {
-    var idUsuario = req.query.id
+    var idUsuario = req.query.fkUsuario
 
-    usuarioModel.ultimasTentativas(idUsuario).then (
+    usuarioModel.ultimasTentativasModel(idUsuario).then (
         function(resultado) {
             console.log('Retornei do Model com as 10 últimas tentativas')
             res.json(resultado)
@@ -101,9 +101,71 @@ function enviarDadosTentativaAtual(req, res) {
     )
 }
 
+function coletarNotasMaximas(req, res) {
+    var idUsuario = req.params.fkUsuario
+
+    usuarioModel.coletarNotasMaximasModel(idUsuario).then (
+        function (resultado) {
+            console.log('Retornei o Model')
+            res.json({
+                resultado: resultado
+            });         
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("\nHouve um erro ao enviar os dados da tentativa. Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    )
+}
+
+function coletarUltimaNota(req, res) {
+    var idUsuario = req.params.fkUsuario
+
+    usuarioModel.coletarUltimaNotaModel(idUsuario).then (
+        function (resultado) {
+            console.log('Retornei o Model')
+            res.json({
+                resultado: resultado
+            });         
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("\nHouve um erro ao enviar os dados da tentativa. Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    )
+}
+
+function coletarMediaNotas(req, res) {
+    var idUsuario = req.params.fkUsuario
+
+    usuarioModel.coletarMediaNotasModel(idUsuario).then (
+        function (resultado) {
+            console.log('Retornei o Model')
+            res.json({
+                resultado: resultado
+            });         
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("\nHouve um erro ao enviar os dados da tentativa. Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    )
+}
+
+
+
 module.exports = {
     autenticar,
     cadastrar,
     receberUltimasTentativas,
-    enviarDadosTentativaAtual
+    enviarDadosTentativaAtual,
+    coletarNotasMaximas,
+    coletarUltimaNota,
+    coletarMediaNotas
 }
