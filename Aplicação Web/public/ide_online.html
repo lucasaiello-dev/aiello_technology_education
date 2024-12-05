@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDE Online</title>
+    <link rel="stylesheet" href="css/ide_online.css">
+</head>
+
+<body>
+    <main>
+        <div id="editor">
+            <div class="titulo">
+                <h2>Editor</h2>
+                <div>
+                    <button id="html" onclick="alterarPagina('htmlCode')" spellcheck="false" class="btn-ide">HTML</button>
+                    <button id="css" onclick="alterarPagina('cssCode')" spellcheck="false" class="btn-ide">CSS</button>
+                    <button id="js" onclick="alterarPagina('jsCode')" spellcheck="false" class="btn-ide">JS</button>
+                </div>
+            </div>
+            <textarea id="htmlCode" class="" oninput="updatePreview()" placeholder="Escreva HTML aqui"></textarea>
+            <textarea id="cssCode" class="esconder" oninput="updatePreview()" placeholder="Escreva CSS aqui"></textarea>
+            <textarea id="jsCode" class="esconder" oninput="updatePreview()"
+                placeholder="Escreva JavaScript aqui"></textarea>
+        </div>
+        <div id="preview">
+            <div class="titulo">
+                <h2>Preview</h2>
+                <div>
+                    <button class="btn-ide" onclick="baixarIframe()" id="baixar">
+                        Download
+                    </button>
+                    <button class="btn-ide" onclick="limparCodigo()" id="limpar">
+                        Limpar
+                    </button>
+                    <button class="btn-ide" onclick="window.location.href='dashboard.html'" id="sair">
+                        Fechar
+                    </button>
+                </div>
+            </div>
+            <iframe id="previewFrame"></iframe>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<script src="js/ide_online.js"></script>
