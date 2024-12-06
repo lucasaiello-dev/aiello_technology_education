@@ -4,8 +4,8 @@ function callback(entries, observer) {
         if (entry.isIntersecting) {
             console.log('O elemento está visível na viewport!');
             contarAte('usuarios_cadastrados', 96);
-            contarAte('tutoriais', 346);
-            contarAte('certificacoes', 257);
+            contarAte('testes', 346);
+            contarAte('aprovacoes', 257);
         } else {
             console.log('O elemento está fora da viewport.');
         }

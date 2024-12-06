@@ -344,12 +344,12 @@ function alterarSitucaoMediaAssuntos(vetorMediasAssuntos = []) {
         console.log(elemento_assunto, elemento_media)
 
         const media = vetorMediasAssuntos[i].media
-        var situacao = 'Baixo'
+        var situacao = 'Alto'
 
-        if (media > 6) {
+        if (media < 8) {
             situacao = 'Médio'
-        } else if (media > 8) {
-            situacao = 'Alto'
+        } else if (media < 5) {
+            situacao = 'Baixo'
         }
 
         elemento_assunto.innerHTML = situacao

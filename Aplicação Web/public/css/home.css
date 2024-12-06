@@ -357,3 +357,21 @@ footer .container {
     border: 0.8em solid #00245C;
 }
 
+.img.gabriel {
+    background-image: url("../assets/gabriel.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
+.img.macari {
+    background-image: url("../assets/macari.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.img.shelly {
+    background-image: url("../assets/shelly.jpeg");
+    background-position: center;
+    background-size: cover;
+}
+
