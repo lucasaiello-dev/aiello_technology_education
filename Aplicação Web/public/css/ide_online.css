@@ -80,6 +80,10 @@ textarea {
     display: none;
 }
 
+button {    
+    cursor: pointer;
+}
+
 .btn-ide {
     padding: 0.6em;
     width: 100%;

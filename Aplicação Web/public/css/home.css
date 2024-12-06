@@ -345,3 +345,15 @@ footer .container {
     width: 51%;
 }
 
+.sessao.tutoriais, .sessao.ide {
+    height: 52vh;
+}
+
+.logo_coding {
+    background-image: url("../assets/image.png");
+    background-position: center left;
+    background-size: cover;
+    border-radius: 0.9em;
+    border: 0.8em solid #00245C;
+}
+

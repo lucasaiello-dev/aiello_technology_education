@@ -62,6 +62,11 @@ var telaAtual
 function trocarTela(proximaTela = '') {
     const tela = document.getElementById(proximaTela)
 
+    if (proximaTela == 'ide_online') {
+        mostrarPopup('Vai codar? 😊', 'Para melhor utilização dessa ferramenta, iremos te direcionar para outra tela.', 'Ir para a IDE Online', 'ide_online.html')
+        return
+    }
+
     telaAtual.classList.add('esconder')
 
     tela.classList.remove('esconder')
