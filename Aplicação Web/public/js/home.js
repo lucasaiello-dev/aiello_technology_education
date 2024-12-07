@@ -3,9 +3,9 @@ function callback(entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             console.log('O elemento está visível na viewport!');
-            contarAte('usuarios_cadastrados', 96);
-            contarAte('testes', 346);
-            contarAte('aprovacoes', 257);
+            contarAte('usuarios_cadastrados', sessionStorage.LIMITE_CADASTRO);
+            contarAte('testes', sessionStorage.LIMITE_TESTE);
+            contarAte('aprovacoes', sessionStorage.LIMITE_APROVACAO);
         } else {
             console.log('O elemento está fora da viewport.');
         }
@@ -48,4 +48,25 @@ function contarAte(idElemento = '', max = 100) {
         contador.textContent = valorAtual;
     }, 12);
 }
+
+function coletarDadosHome() {
+    fetch("/usuario/coletarMetricasHome")
+
+        .then(function (resposta) {
+            if (resposta.ok) {
+                resposta.json().then(function (res){
+                    console.log(res)
+                    sessionStorage.LIMITE_CADASTRO = res[0].qtdUsuario
+                    sessionStorage.LIMITE_TESTE = res[0].qtdTestes
+                    sessionStorage.LIMITE_APROVACAO = res[0].qtdAprovacoes
+                })
+            }
+        })
+
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+}
+
+
 

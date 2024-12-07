@@ -106,6 +106,10 @@ SELECT * FROM usuario;
 SELECT * FROM teste;
 SELECT * FROM tentativa;
 
+SELECT (select count(idUsuario) FROM usuario) AS qtdUsuario, count(idTentativa) AS qtdTestes, (select count(idTentativa) FROM tentativa WHERE notaFinal >= 7) AS qtd_aprovacoes
+	FROM usuario JOIN tentativa
+    ON usuario.idUsuario = tentativa.fkUsuario;
+
 
 
 

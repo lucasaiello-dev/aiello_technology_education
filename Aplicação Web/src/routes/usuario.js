@@ -35,4 +35,8 @@ router.get('/coletarMediaPorAssunto/:fkUsuario', (req, res) => {
     usuarioController.coletarMediaPorAssunto(req, res)
 })
 
+router.get('/coletarMetricasHome/', (req, res) => {
+    usuarioController.coletarMetricasHome(req, res)
+})
+
 module.exports = router

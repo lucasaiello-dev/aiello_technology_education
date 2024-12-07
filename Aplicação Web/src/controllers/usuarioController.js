@@ -180,6 +180,22 @@ function coletarMediaPorAssunto(req, res) {
     )
 }
 
+function coletarMetricasHome(req, res) {
+
+    usuarioModel.coletarMetricasHomeModel().then (
+        function(resultado) {
+            console.log('Retornei do Model com métricas para Home')
+            res.status(201).json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("\nHouve um erro ao retornar as métricas para Home. Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    )
+}
+
 
 
 module.exports = {
@@ -190,5 +206,6 @@ module.exports = {
     coletarNotasMaximas,
     coletarUltimaNota,
     coletarMediaNotas,
-    coletarMediaPorAssunto
+    coletarMediaPorAssunto,
+    coletarMetricasHome
 }

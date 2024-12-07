@@ -73,6 +73,16 @@ function coletarMediaPorAssuntoModel(idUsuario) {
     return database.executar(instrucaoSql)
 }
 
+function coletarMetricasHomeModel() {
+    console.log('ACESSEI O USUÁRIO MODEL')
+    var instrucaoSql = `
+    SELECT (select count(idUsuario) FROM usuario) AS qtdUsuario, count(idTentativa) AS qtdTestes, (select count(idTentativa) FROM tentativa WHERE notaFinal >= 7) AS qtdAprovacoes
+	FROM usuario JOIN tentativa
+    ON usuario.idUsuario = tentativa.fkUsuario;
+    `
+    return database.executar(instrucaoSql)
+}
+
 module.exports = {
     autenticar,
     cadastrar,
@@ -81,5 +91,6 @@ module.exports = {
     coletarNotasMaximasModel,
     coletarUltimaNotaModel,
     coletarMediaNotasModel,
-    coletarMediaPorAssuntoModel
+    coletarMediaPorAssuntoModel,
+    coletarMetricasHomeModel
 }
